@@ -8,6 +8,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { EmailVerificationComponent } from './email-verification/email-verification.component';
 
 
+
 @NgModule({
   declarations: [
     AuthenticationComponent,
@@ -17,7 +18,7 @@ import { EmailVerificationComponent } from './email-verification/email-verificat
   ],
   imports: [
     CommonModule,
-    AuthenticationRoutingModule
+    AuthenticationRoutingModule,
   ]
 })
 export class AuthenticationModule { }
