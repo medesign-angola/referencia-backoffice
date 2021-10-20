@@ -1,16 +1,34 @@
 <div class="panel">
     <div class="panel-header">
         <div class="logotype">
-            img
+            <img width="40%" src="../../../assets/Logotipo/logotipo.svg" alt="">
         </div>
     </div>
     <div class="panel-title">
-        Entrar
+       <h1> Entrar </h1>
     </div>
     <div class="form">
-        <div class="input">
-            <div><label for="">Número de Telemóvel ou E-mail</label></div>
-            <div><input type="text" name="" id=""></div>
+        <form action="">
+            <div class="input">
+                <div class="label"><label for="">Número de Telemóvel ou E-mail</label></div>
+                <div><input type="text" name="" id=""></div>
+            </div>
+            <div class="input">
+                <div class="label">
+                    <label for="">Palavra-passe</label>
+                    <span><a routerLink="/">Esqueceu a Senha?</a></span>
+                </div>
+                <div><input type="text" name="" id=""></div>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="check"> <label for="#check">Recordar-me</label>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Entrar na conta">
+            </div>
+        </form>
+        <div class="navigation">
+            <span>Não tem uma conta ainda? <a routerLink="/register">Criar conta</a></span>
         </div>
     </div>
     <a routerLink="/register">Register</a>
