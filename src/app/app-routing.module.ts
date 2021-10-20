@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'definicoes', loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule) },
   { path: 'imoveis', loadChildren: () => import('./properties/properties.module').then(m => m.PropertiesModule) },
   { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
+  { path: '', redirectTo: 'auth', pathMatch: 'full' }
 ];
 
 @NgModule({
