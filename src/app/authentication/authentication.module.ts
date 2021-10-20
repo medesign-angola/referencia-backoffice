@@ -6,6 +6,7 @@ import { AuthenticationComponent } from './authentication.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { EmailVerificationComponent } from './email-verification/email-verification.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,6 +20,12 @@ import { EmailVerificationComponent } from './email-verification/email-verificat
   imports: [
     CommonModule,
     AuthenticationRoutingModule,
+    RouterModule
+  ],
+  exports: [
+    SignUpComponent,
+    SignInComponent,
+    EmailVerificationComponent
   ]
 })
 export class AuthenticationModule { }
