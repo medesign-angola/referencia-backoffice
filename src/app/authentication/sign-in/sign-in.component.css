@@ -1,11 +1,11 @@
 div.panel{
     /* background-color: aquamarine; */
-    width: 45%;
+    width: 500px;
     position: relative;
-    margin: 0px auto;
-    margin-top: 10%;
+    margin: 5% auto;
+    /* margin-top: 5%; */
     padding: 20px;
-    box-shadow: 0px 2px 15px #ccc;
+    box-shadow: 0px 2px 15px #ddd;
 }
 div.panel-header{
     padding: 10px;
@@ -20,27 +20,64 @@ div.panel-header div.logotype{
 div.panel div.panel-title{
     font-size: large;
     text-align: center;
-    padding: 25px 0px;
+    padding: 15px 0px;
 }
 div.panel div.form label, span, a{
     font-family: var(--font-family-Poppins-M);
     font-size: small;
 }
-form{
-    padding: 20px 0px;
-}
-form{}
+/* form{
+    padding: 0px 0px;
+} */
 form div.input div.label{
     margin: 10px 0px;
 }
 form div.input div > input{
     padding: 15px;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #eee;
     outline: none;
+    border-radius: 3px;
+}
+form div.input > div{
+    /* margin: 10px 0px; */
 }
 form div.input div.label span a{
     float: right;
-    color: #bbb;
+    color: #aaa;
     text-decoration: none;
+}
+div.checkbox{
+    padding: 20px 0px;
+}
+div.checkbox input{
+    width: 15px;
+    height: 15px;
+    transition: .3s;
+}
+div.checkbox > label{
+    margin-left: 10px;
+    color: #bbb;
+    /* vertical-align: middle; */
+}
+div.submit{
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+}
+div.submit input{
+    width: 100%;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    background-color: #2499ff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+div.navigation{
+    text-align: center;
+}
+div.navigation span{}
+div.navigation span a{
+    text-decoration: none;
+    color: #2499ff;
 }

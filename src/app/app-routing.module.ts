@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: 'auth', loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule) },
-  { path: 'recuperar', loadChildren: () => import('./recovery/recovery.module').then(m => m.RecoveryModule) },
   { path: 'suporte', loadChildren: () => import('./support/support.module').then(m => m.SupportModule) },
   { path: 'editarConta', loadChildren: () => import('./edit-account/edit-account.module').then(m => m.EditAccountModule) },
   { path: 'minhaConta', loadChildren: () => import('./my-account/my-account.module').then(m => m.MyAccountModule) },
