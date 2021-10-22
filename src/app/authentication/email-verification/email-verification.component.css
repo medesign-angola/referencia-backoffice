@@ -22,6 +22,9 @@ div.panel div.panel-title{
     text-align: center;
     padding: 15px 0px;
 }
+div.panel div.panel-title h1{
+    font-family: var(--font-family-Poppins-M);
+}
 div.panel div.paragraph{
     margin: 15px 0px;
 }
