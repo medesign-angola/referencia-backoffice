@@ -1,6 +1,6 @@
 div.panel{
     /* background-color: aquamarine; */
-    width: 520px;
+    width: 550px;
     position: relative;
     margin: 5% auto;
     /* margin-top: 5%; */
@@ -20,10 +20,18 @@ div.panel-header div.logotype{
 div.panel div.panel-title{
     font-size: large;
     text-align: center;
-    padding: 15px 0px;
+    padding: 15px 0px
 }
 div.panel div.panel-title h1{
     font-family: var(--font-family-Poppins-M);
+}
+div.panel div.paragraph{
+    margin: 15px 0px;
+}
+div.panel div.paragraph p{
+    font-size: small;
+    text-align: center;
+    font-family: var(--font-family-Poppins-L);
 }
 div.panel div.form label, span, a{
     font-family: var(--font-family-Poppins-M);
@@ -32,8 +40,9 @@ div.panel div.form label, span, a{
 /* form{
     padding: 0px 0px;
 } */
-form div.input div.label{
-    margin: 10px 0px;
+form div.input{
+    margin: 30px 0px;
+    width: 100%;
 }
 form div.input div > input{
     padding: 15px;
@@ -44,28 +53,19 @@ form div.input div > input{
 }
 form div.input > div{
     /* margin: 10px 0px; */
+    width: 105px;
+    display: inline-block;
+    margin: 0px 10px;
 }
-form div.input div.label span a{
-    float: right;
-    color: #aaa;
-    text-decoration: none;
-}
-div.checkbox{
-    padding: 20px 0px;
-}
-div.checkbox input{
-    width: 15px;
-    height: 15px;
-    transition: .3s;
-}
-div.checkbox > label{
-    margin-left: 10px;
-    color: #bbb;
-    /* vertical-align: middle; */
+form div.input > div:nth-child(2),
+form div.input > div:nth-child(3){
+    /* margin: 0px 20px; */
+
+
 }
 div.submit{
     width: 100%;
-    margin: 0px 0px 20px 0px;
+    margin: 25px 0px 10px 0px;
 }
 div.submit input{
     width: 100%;
@@ -78,6 +78,7 @@ div.submit input{
 }
 div.navigation{
     text-align: center;
+    margin: 30px 0px;
 }
 div.navigation span{}
 div.navigation span a{

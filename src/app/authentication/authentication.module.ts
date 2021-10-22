@@ -6,6 +6,9 @@ import { AuthenticationComponent } from './authentication.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { EmailVerificationComponent } from './email-verification/email-verification.component';
+import { RouterModule } from '@angular/router';
+import { CodeFormComponent } from './code-form/code-form.component';
+import { EmailFormComponent } from './email-form/email-form.component';
 
 
 
@@ -14,11 +17,21 @@ import { EmailVerificationComponent } from './email-verification/email-verificat
     AuthenticationComponent,
     SignUpComponent,
     SignInComponent,
-    EmailVerificationComponent
+    EmailVerificationComponent,
+    CodeFormComponent,
+    EmailFormComponent
   ],
   imports: [
     CommonModule,
     AuthenticationRoutingModule,
+    RouterModule
+  ],
+  exports: [
+    SignUpComponent,
+    SignInComponent,
+    EmailVerificationComponent,
+    CodeFormComponent,
+    EmailFormComponent
   ]
 })
 export class AuthenticationModule { }
