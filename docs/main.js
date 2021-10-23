@@ -32,7 +32,7 @@ class SignUpComponent {
     }
 }
 SignUpComponent.ɵfac = function SignUpComponent_Factory(t) { return new (t || SignUpComponent)(); };
-SignUpComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SignUpComponent, selectors: [["app-sign-up"]], decls: 46, vars: 0, consts: [[1, "panel"], [1, "panel-header"], [1, "logotype"], ["width", "40%", "src", "../../../assets/Logotipo/logotipo.svg", "alt", ""], [1, "panel-title"], [1, "form"], ["action", ""], [1, "input"], [1, "label"], ["for", ""], ["type", "text", "name", "", "id", ""], ["type", "email", "name", "", "id", ""], ["type", "password", "name", "", "id", ""], [1, "checkbox"], ["type", "checkbox", "id", "check"], ["for", "check"], ["routerLink", "/login"], [1, "submit"], ["type", "submit", "value", "Criar conta"], [1, "navigation"]], template: function SignUpComponent_Template(rf, ctx) { if (rf & 1) {
+SignUpComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SignUpComponent, selectors: [["app-sign-up"]], decls: 46, vars: 0, consts: [[1, "panel"], [1, "panel-header"], [1, "logotype"], ["width", "40%", "src", "assets/Logotipo/logotipo.svg", "alt", ""], [1, "panel-title"], [1, "form"], ["action", ""], [1, "input"], [1, "label"], ["for", ""], ["type", "text", "name", "", "id", ""], ["type", "email", "name", "", "id", ""], ["type", "password", "name", "", "id", ""], [1, "checkbox"], ["type", "checkbox", "id", "check"], ["for", "check"], ["routerLink", "/login"], [1, "submit"], ["type", "submit", "value", "Criar conta"], [1, "navigation"]], template: function SignUpComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -162,7 +162,7 @@ class CodeFormComponent {
     }
 }
 CodeFormComponent.ɵfac = function CodeFormComponent_Factory(t) { return new (t || CodeFormComponent)(); };
-CodeFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: CodeFormComponent, selectors: [["app-code-form"]], decls: 28, vars: 0, consts: [[1, "panel"], [1, "panel-header"], [1, "logotype"], ["width", "40%", "src", "../../../assets/Logotipo/logotipo.svg", "alt", ""], [1, "panel-title"], [1, "paragraph"], [1, "form"], ["action", ""], [1, "input"], ["type", "text", "name", "", "id", ""], [1, "submit"], ["type", "submit", "value", "Verificar minha conta"], [1, "navigation"], ["routerLink", "/login"]], template: function CodeFormComponent_Template(rf, ctx) { if (rf & 1) {
+CodeFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: CodeFormComponent, selectors: [["app-code-form"]], decls: 28, vars: 0, consts: [[1, "panel"], [1, "panel-header"], [1, "logotype"], ["width", "40%", "src", "assets/Logotipo/logotipo.svg", "alt", ""], [1, "panel-title"], [1, "paragraph"], [1, "form"], ["action", ""], [1, "input"], ["type", "text", "name", "", "id", ""], [1, "submit"], ["type", "submit", "value", "Verificar minha conta"], [1, "navigation"], ["routerLink", "/login"]], template: function CodeFormComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -289,7 +289,7 @@ class SignInComponent {
     }
 }
 SignInComponent.ɵfac = function SignInComponent_Factory(t) { return new (t || SignInComponent)(); };
-SignInComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SignInComponent, selectors: [["app-sign-in"]], decls: 30, vars: 0, consts: [[1, "panel"], [1, "panel-header"], [1, "logotype"], ["width", "40%", "src", "../../../assets/Logotipo/logotipo.svg", "alt", ""], [1, "panel-title"], [1, "form"], ["action", ""], [1, "input"], [1, "label"], ["for", ""], ["type", "text", "name", "", "id", ""], ["routerLink", "/recover"], [1, "checkbox"], ["type", "checkbox", "id", "check"], ["for", "check"], [1, "submit"], ["type", "submit", "value", "Entrar na conta"]], template: function SignInComponent_Template(rf, ctx) { if (rf & 1) {
+SignInComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SignInComponent, selectors: [["app-sign-in"]], decls: 30, vars: 0, consts: [[1, "panel"], [1, "panel-header"], [1, "logotype"], ["width", "40%", "src", "assets/Logotipo/logotipo.svg", "alt", "Logotipo"], [1, "panel-title"], [1, "form"], ["action", ""], [1, "input"], [1, "label"], ["for", ""], ["type", "text", "name", "", "id", ""], ["routerLink", "/recover"], [1, "checkbox"], ["type", "checkbox", "id", "check"], ["for", "check"], [1, "submit"], ["type", "submit", "value", "Entrar na conta"]], template: function SignInComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -428,7 +428,7 @@ class EmailVerificationComponent {
     }
 }
 EmailVerificationComponent.ɵfac = function EmailVerificationComponent_Factory(t) { return new (t || EmailVerificationComponent)(); };
-EmailVerificationComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: EmailVerificationComponent, selectors: [["app-email-verification"]], decls: 22, vars: 0, consts: [[1, "panel"], [1, "panel-header"], [1, "logotype"], ["width", "40%", "src", "../../../assets/Logotipo/logotipo.svg", "alt", ""], [1, "panel-title"], [1, "paragraph"], [1, "form"], ["action", ""], [1, "submit"], ["type", "submit", "value", "Continuar a verifica\u00E7\u00E3o"], [1, "navigation"], ["routerLink", ""]], template: function EmailVerificationComponent_Template(rf, ctx) { if (rf & 1) {
+EmailVerificationComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: EmailVerificationComponent, selectors: [["app-email-verification"]], decls: 22, vars: 0, consts: [[1, "panel"], [1, "panel-header"], [1, "logotype"], ["width", "40%", "src", "assets/Logotipo/logotipo.svg", "alt", ""], [1, "panel-title"], [1, "paragraph"], [1, "form"], ["action", ""], [1, "submit"], ["type", "submit", "value", "Continuar a verifica\u00E7\u00E3o"], [1, "navigation"], ["routerLink", ""]], template: function EmailVerificationComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -554,7 +554,7 @@ class EmailFormComponent {
     }
 }
 EmailFormComponent.ɵfac = function EmailFormComponent_Factory(t) { return new (t || EmailFormComponent)(); };
-EmailFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: EmailFormComponent, selectors: [["app-email-form"]], decls: 24, vars: 0, consts: [[1, "panel"], [1, "panel-header"], [1, "logotype"], ["width", "40%", "src", "../../../assets/Logotipo/logotipo.svg", "alt", ""], [1, "panel-title"], [1, "paragraph"], [1, "form"], ["action", ""], [1, "input"], [1, "label"], ["for", ""], ["type", "email", "name", "", "id", ""], [1, "submit"], ["type", "submit", "value", "Enviar"], [1, "navigation"], ["routerLink", "/login"]], template: function EmailFormComponent_Template(rf, ctx) { if (rf & 1) {
+EmailFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: EmailFormComponent, selectors: [["app-email-form"]], decls: 24, vars: 0, consts: [[1, "panel"], [1, "panel-header"], [1, "logotype"], ["width", "40%", "src", "assets/Logotipo/logotipo.svg", "alt", ""], [1, "panel-title"], [1, "paragraph"], [1, "form"], ["action", ""], [1, "input"], [1, "label"], ["for", ""], ["type", "email", "name", "", "id", ""], [1, "submit"], ["type", "submit", "value", "Enviar"], [1, "navigation"], ["routerLink", "/login"]], template: function EmailFormComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -617,7 +617,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: 'auth', loadChildren: () => Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./authentication/authentication.module */ "OpKh")).then(m => m.AuthenticationModule) },
+    // { path: 'auth', loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule) },
     { path: 'suporte', loadChildren: () => __webpack_require__.e(/*! import() | support-support-module */ "support-support-module").then(__webpack_require__.bind(null, /*! ./support/support.module */ "ZlwT")).then(m => m.SupportModule) },
     { path: 'editarConta', loadChildren: () => __webpack_require__.e(/*! import() | edit-account-edit-account-module */ "edit-account-edit-account-module").then(__webpack_require__.bind(null, /*! ./edit-account/edit-account.module */ "MeL2")).then(m => m.EditAccountModule) },
     { path: 'minhaConta', loadChildren: () => __webpack_require__.e(/*! import() | my-account-my-account-module */ "my-account-my-account-module").then(__webpack_require__.bind(null, /*! ./my-account/my-account.module */ "J8OZ")).then(m => m.MyAccountModule) },
