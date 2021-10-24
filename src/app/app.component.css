@@ -15,6 +15,7 @@ nav ul li a{
     padding: 10px;
     color: #ddd;
     margin: 0px 15px;
+    font-family: var(--font-family-Poppins-L);
 }
 .active{
     /* background-color: #2499ff; */
