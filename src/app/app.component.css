@@ -1,0 +1,25 @@
+nav {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+nav ul{
+    list-style: none;
+    text-align: center;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    color: #ddd;
+    margin: 0px 15px;
+    font-family: var(--font-family-Poppins-L);
+}
+.active{
+    /* background-color: #2499ff; */
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    color: #fff;
+}
