@@ -49,7 +49,9 @@ form div.input div > input{
     width: 100%;
     border: 1px solid #eee;
     outline: none;
+    font-size: 1.3em;
     border-radius: 3px;
+    text-align: center;
 }
 form div.input > div{
     /* margin: 10px 0px; */
