@@ -5,6 +5,7 @@ import { PropertiesRoutingModule } from './properties-routing.module';
 import { PropertiesComponent } from './properties.component';
 import { HeaderComponent } from './header/header.component';
 import { PropertiesTableComponent } from './properties-table/properties-table.component';
+import { ShareModuleModule } from '../share-module/share-module.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { PropertiesTableComponent } from './properties-table/properties-table.co
   ],
   imports: [
     CommonModule,
-    PropertiesRoutingModule
+    PropertiesRoutingModule,
+    ShareModuleModule
   ]
 })
 export class PropertiesModule { }
