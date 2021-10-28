@@ -18,7 +18,7 @@ class MenuComponent {
     }
 }
 MenuComponent.ɵfac = function MenuComponent_Factory(t) { return new (t || MenuComponent)(); };
-MenuComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: MenuComponent, selectors: [["app-menu"]], decls: 36, vars: 0, consts: [["rel", "stylesheet", "href", "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"], [1, "sidebar"], [1, "logo"], ["width", "80%", "src", "../../../assets/Logotipo/logotipo.svg", "alt", ""], [1, "sidebar-menu"], ["href", ""], [1, "las", "la-igloo"], ["href", "", 1, "active"], [1, "las", "la-users"], [1, "las", "la-tools"]], template: function MenuComponent_Template(rf, ctx) { if (rf & 1) {
+MenuComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: MenuComponent, selectors: [["app-menu"]], decls: 36, vars: 0, consts: [["rel", "stylesheet", "href", "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"], [1, "sidebar"], [1, "logo"], ["width", "80%", "src", "assets/Logotipo/logotipo.svg", "alt", ""], [1, "sidebar-menu"], ["href", ""], [1, "las", "la-igloo"], ["href", "", 1, "active"], [1, "las", "la-users"], [1, "las", "la-tools"]], template: function MenuComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "link", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -183,13 +183,12 @@ class PropertiesComponent {
     }
 }
 PropertiesComponent.ɵfac = function PropertiesComponent_Factory(t) { return new (t || PropertiesComponent)(); };
-PropertiesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PropertiesComponent, selectors: [["app-properties"]], decls: 6, vars: 0, consts: [[1, "container"]], template: function PropertiesComponent_Template(rf, ctx) { if (rf & 1) {
+PropertiesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PropertiesComponent, selectors: [["app-properties"]], decls: 5, vars: 0, consts: [[1, "container"]], template: function PropertiesComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "app-properties-table");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "app-menu");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "app-menu");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } }, directives: [_properties_table_properties_table_component__WEBPACK_IMPORTED_MODULE_1__["PropertiesTableComponent"], _share_module_menu_menu_component__WEBPACK_IMPORTED_MODULE_2__["MenuComponent"]], styles: [".container[_ngcontent-%COMP%]{\r\n    \r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInByb3BlcnRpZXMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7QUFFQSIsImZpbGUiOiJwcm9wZXJ0aWVzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVye1xyXG4gICAgXHJcbn0iXX0= */"] });
 
@@ -311,7 +310,7 @@ class PropertiesTableComponent {
     }
 }
 PropertiesTableComponent.ɵfac = function PropertiesTableComponent_Factory(t) { return new (t || PropertiesTableComponent)(); };
-PropertiesTableComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PropertiesTableComponent, selectors: [["app-properties-table"]], decls: 93, vars: 0, consts: [["rel", "stylesheet", "href", "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"], [1, "main-content"], [1, "search-wrapper1"], [1, "las", "la-search"], ["type", "search", "placeholder", "Pesquisar no Dashboard"], [1, "user-wrapper"], ["src", "../assets/Icons/Grupo 12.svg", "alt", "", 2, "cursor", "pointer"], ["src", "../assets/Icons/Grupo 350.svg", "width", "40px", "height", "40px", "alt", "", 2, "cursor", "pointer"], [1, "cards"], [1, "card-single"], [1, "recent-grid"], [1, "projects"], [1, "card"], [1, "card-header"], [1, "search-wrapper"], ["type", "search", "placeholder", "Pesquisar aqui"], [1, "card-body"], [2, "width", "100%"], ["src", "../assets/Icons/Estrelinhas.svg", "alt", ""], [1, "status", "verde"], [1, "status", "vermelho"], [1, "status", "orange"], [1, "table-responsive"]], template: function PropertiesTableComponent_Template(rf, ctx) { if (rf & 1) {
+PropertiesTableComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PropertiesTableComponent, selectors: [["app-properties-table"]], decls: 93, vars: 0, consts: [["rel", "stylesheet", "href", "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"], [1, "main-content"], [1, "search-wrapper1"], [1, "las", "la-search"], ["type", "search", "placeholder", "Pesquisar no Dashboard"], [1, "user-wrapper"], ["src", "assets/Icons/Grupo 12.svg", "alt", "", 2, "cursor", "pointer"], ["src", "assets/Icons/Grupo 350.svg", "width", "40px", "height", "40px", "alt", "", 2, "cursor", "pointer"], [1, "cards"], [1, "card-single"], [1, "recent-grid"], [1, "projects"], [1, "card"], [1, "card-header"], [1, "search-wrapper"], ["type", "search", "placeholder", "Pesquisar aqui"], [1, "card-body"], [2, "width", "100%"], ["src", "assets/Icons/Estrelinhas.svg", "alt", ""], [1, "status", "verde"], [1, "status", "vermelho"], [1, "status", "orange"], [1, "table-responsive"]], template: function PropertiesTableComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "link", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "header");
