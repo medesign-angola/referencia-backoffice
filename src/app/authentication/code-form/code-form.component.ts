@@ -9,7 +9,13 @@ export class CodeFormComponent implements OnInit {
 
   constructor() { }
 
+  codeResent: boolean = false;
+
   ngOnInit(): void {
+  }
+
+  message(){
+    this.codeResent = true;
   }
 
 }
