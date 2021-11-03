@@ -1,0 +1,31 @@
+<div class="panel">
+    <div class="panel-header">
+        <div class="logotype">
+            <img width="40%" src="assets/Logotipo/logotipo.svg" alt="">
+        </div>
+    </div>
+    <div class="panel-title">
+       <h1> Esqueceu a Senha? </h1>
+    </div>
+    <div class="paragraph">
+        <p> Foi enviado um código de verificação para o seu e-mail.
+            Digite o código de e-mail no formulário abaixo..</p>
+    </div>
+    <h4 *ngIf="codeResent" style="color: green; text-align: center;">O código foi reenviado com êxito!</h4>
+    <div class="form">
+        <form action="">
+            <div class="input">
+                <div><input type="text" name="" id="" maxlength="1"></div>
+                <div><input type="text" name="" id="" maxlength="1"></div>
+                <div><input type="text" name="" id="" maxlength="1"></div>
+                <div><input type="text" name="" id="" maxlength="1"></div>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Verificar minha conta">
+            </div>
+        </form>
+        <div class="navigation">
+            <span>Não recebi. <a routerLink="/code" (click)="message()">Reenviar um novo código</a></span>
+        </div>
+    </div>
+</div>
