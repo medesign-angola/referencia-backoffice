@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { AuthenticationRoutingModule } from './authentication-routing.module';
 import { AuthenticationComponent } from './authentication.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { EmailVerificationComponent } from './email-verification/email-verification.component';
 import { RouterModule } from '@angular/router';
@@ -15,7 +14,6 @@ import { EmailFormComponent } from './email-form/email-form.component';
 @NgModule({
   declarations: [
     AuthenticationComponent,
-    SignUpComponent,
     SignInComponent,
     EmailVerificationComponent,
     CodeFormComponent,
@@ -27,7 +25,6 @@ import { EmailFormComponent } from './email-form/email-form.component';
     RouterModule
   ],
   exports: [
-    SignUpComponent,
     SignInComponent,
     EmailVerificationComponent,
     CodeFormComponent,

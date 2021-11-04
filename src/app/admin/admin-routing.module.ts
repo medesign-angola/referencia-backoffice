@@ -1,6 +1,14 @@
-import { NgModule } from '@angular/core';
+ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from '../dashboard/dashboard.component';
+import { EditAccountComponent } from '../edit-account/edit-account.component';
+import { MyAccountComponent } from '../my-account/my-account.component';
+import { OwnersComponent } from '../owners/owners.component';
+import { PropertiesComponent } from '../properties/properties.component';
+import { RequestsComponent } from '../requests/requests.component';
+import { SettingsComponent } from '../settings/settings.component';
+import { SupportComponent } from '../support/support.component';
+import { UsersComponent } from '../users/users.component';
 import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
@@ -17,6 +25,7 @@ const routes: Routes = [
       { path: 'definicoes', loadChildren: () => import('../settings/settings.module').then(m => m.SettingsModule) },
       { path: 'imoveis', loadChildren: () => import('../properties/properties.module').then(m => m.PropertiesModule) },
       { path: 'dashboard', loadChildren: () => import('../dashboard/dashboard.module').then(m => m.DashboardModule) },
+      { path: '', redirectTo: '/admin/dashboard', pathMatch: 'full' }
     ],
   },
 ];
