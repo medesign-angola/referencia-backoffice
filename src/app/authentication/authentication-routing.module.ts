@@ -8,12 +8,17 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
-  // { path: '', component: AuthenticationComponent },
-  { path: 'login', component: SignInComponent },
-  { path: 'recover', component: EmailFormComponent },
-  { path: 'verification', component: EmailVerificationComponent },
-  { path: 'code', component: CodeFormComponent }
-  // { path: 'register', component: SignUpComponent },
+  { 
+    path: '', component: AuthenticationComponent,
+    children: [
+      { path: 'login', component: SignInComponent },
+      { path: 'recover', component: EmailFormComponent },
+      { path: 'verification', component: EmailVerificationComponent },
+      { path: 'code', component: CodeFormComponent },
+      { path: '', redirectTo: '/login', pathMatch: 'full' }
+    ],
+  },
+  
 ];
 
 @NgModule({
