@@ -13,37 +13,18 @@ import { OwnersComponent } from '../owners/owners.component';
 import { RequestsComponent } from '../requests/requests.component';
 import { UsersComponent } from '../users/users.component';
 import { ShareModuleModule } from '../share-module/share-module.module';
+import { PropertiesModule } from '../properties/properties.module';
+import { OwnersModule } from '../owners/owners.module';
 
 
 @NgModule({
   declarations: [
     AdminComponent,
-    // DashboardComponent,
-    // SupportComponent,
-    // SettingsComponent,
-    // EditAccountComponent,
-    // MyAccountComponent,
-    // PropertiesComponent,
-    // OwnersComponent,
-    // RequestsComponent,
-    // UsersComponent
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    ShareModuleModule
+    ShareModuleModule,
   ],
-  // exports: [
-  //   AdminComponent,
-  //   DashboardComponent,
-  //   SupportComponent,
-  //   SettingsComponent,
-  //   EditAccountComponent,
-  //   MyAccountComponent,
-  //   PropertiesComponent,
-  //   OwnersComponent,
-  //   RequestsComponent,
-  //   UsersComponent
-  // ]
 })
 export class AdminModule { }
