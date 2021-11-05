@@ -1,27 +1,4 @@
-.main-content{
-    margin-top: -50px;
-    margin-left: 305px;
-}
 
-main{
-    margin-top: 85px;
-    padding: 2rem 1.5rem;
-    background: #ffffff;
-    min-height: calc(100vh - 90px);
-}
-.cards{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem;
-    margin-top: 1rem;
-}
-.card-single{
-    display: flex;
-    justify-content: space-between;
-    background: #fff;
-    padding: 2rem;
-    border-radius: 2px;
-}
 .card{
     background: #fff;
     border-radius: 5px;
@@ -44,7 +21,6 @@ main{
     padding: .5rem 1rem;
     border: 1px solid var(--main-color);
 }
-
 .search-wrapper{
     /* border: 1px solid rgb(145, 142, 142); */
     height: 40px;
@@ -70,6 +46,7 @@ main{
 
 table{
     border-collapse: collapse;
+    /* background-color: #fc0; */
 }
 
 thead tr{
