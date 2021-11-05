@@ -12,6 +12,7 @@ import { PropertiesComponent } from '../properties/properties.component';
 import { OwnersComponent } from '../owners/owners.component';
 import { RequestsComponent } from '../requests/requests.component';
 import { UsersComponent } from '../users/users.component';
+import { ShareModuleModule } from '../share-module/share-module.module';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { UsersComponent } from '../users/users.component';
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    ShareModuleModule
   ],
   // exports: [
   //   AdminComponent,

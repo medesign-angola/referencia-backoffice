@@ -1,41 +1,73 @@
 
-
 <div class="sidebar">
-  
-<div class="logo">
-  <img width="80%" src="assets/Logotipo/logotipo.svg" alt="">
-</div>
- <div class="sidebar-menu">
-    <ul>
-      <li>
-        <a href=""><span class="las la-igloo"></span>
-        <span>Dashboard</span></a>
-        
-      </li>
-      <li>
-        <a href="" routerLink="active"><span class="las la-igloo"></span>
-        <span>Imoveis</span></a>
-      </li>
-      <li>
-        <a href="/proprietarios" routerLink="active">
-          <span class="">
-            <img width="25" src="../../../assets/Icons/3 User.svg" alt="">
-          </span>
-          <span>Proprietarios</span>
-        </a>
-      </li>
-      <li>
-        <a href="" routerLink="active"><span class="las la-igloo"></span>
-        <span>Solicitações</span></a>
-      </li>
-      <li>
-        <a href="" routerLink="active"><span class="las la-users"></span>
-        <span>Usuários</span></a>
-      </li>
-      <li>
-        <a href="" routerLink="active"><span class="las la-tools"></span>
-        <span>Definições</span></a>
-      </li>
-    </ul>
+  <div class="logo">
+    <img width="90%" src="assets/Logotipo/logotipo.svg" alt="">
   </div>
+  <div class="sidebar-menu">
+      <ul>
+        <li>
+          <a routerLink="/admin/dashboard" routerLinkActive="active">
+            <span class="">
+              <img width="23" src="../../../assets/Icons/3 User.svg" alt="">
+            </span>
+          <span class="text">Dashboard</span></a>
+          
+        </li>
+        <li>
+          <a routerLink="/admin/imoveis" routerLinkActive="active">
+            <span class="">
+              <img width="23" src="../../../assets/Icons/3 User.svg" alt="">
+            </span>
+          <span class="text">Imoveis</span></a>
+        </li>
+        <li>
+          <a routerLink="/admin/proprietarios" routerLinkActive="active">
+            <span class="">
+              <img width="23" src="../../../assets/Icons/3 User.svg" alt="">
+            </span>
+            <span class="text">Proprietarios</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/admin/solicitacoes" routerLinkActive="active">
+            <span class="">
+              <img width="23" src="../../../assets/Icons/3 User.svg" alt="">
+            </span>
+          <span class="text">Solicitações</span></a>
+        </li>
+        <li>
+          <a routerLink="/admin/usuarios" routerLinkActive="active">
+            <span class="">
+              <img width="23" src="../../../assets/Icons/3 User.svg" alt="">
+            </span>
+          <span class="text">Usuários</span></a>
+        </li>
+        <li>
+          <a routerLink="/admin/definicoes" routerLinkActive="active">
+            <span class="">
+              <img width="23" src="../../../assets/Icons/3 User.svg" alt="">
+            </span>
+          <span class="text">Definições</span></a>
+        </li>
+      </ul>
+    </div>
 </div>
+<header>
+  <h2>
+    Imóveis
+  </h2>
+
+  <div class="search-wrapper1">
+    <span class="">
+      <img width="17" src="../../../assets/Icons/icone-pesquisa.svg" alt="">
+    </span>
+    <input type="search" placeholder="Pesquisar no Dashboard">
+  </div>
+
+  <div class="user-wrapper">
+    
+    <img src="assets/Icons/Grupo 12.svg" width="20px" alt="" style="cursor: pointer;">
+    <img src="assets/Icons/Grupo 350.svg" width="40px" alt="" style="cursor: pointer;">
+  
+  </div>
+</header>
