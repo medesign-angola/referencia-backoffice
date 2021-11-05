@@ -17,7 +17,6 @@ import { ShareModuleModule } from '../share-module/share-module.module';
   imports: [
     CommonModule,
     PropertiesRoutingModule,
-    ShareModuleModule
   ]
 })
 export class PropertiesModule { }

@@ -1,3 +1,9 @@
 .container{
     
 }
+main{
+    margin-top: 85px;
+    padding: 2rem 1.5rem;
+    background: #ffffff;
+    min-height: calc(100vh - 90px);
+}
