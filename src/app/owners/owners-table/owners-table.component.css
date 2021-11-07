@@ -1,0 +1,120 @@
+
+.card{
+    background: #fff;
+    border-radius: 5px;
+}
+.card-header,
+.card-body{
+    padding: 1rem;
+}
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+}
+.card-header button{
+    background: var(--main-color);
+    border-radius: 10px;
+    color: #fff;
+    font-size: .8rem;
+    padding: .5rem 1rem;
+    border: 1px solid var(--main-color);
+}
+.search-wrapper{
+    /* border: 1px solid rgb(145, 142, 142); */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    /* background: #f4f7fa; */
+}
+
+.search-wrapper span{
+    display: inline-block;
+    padding: 0rem 1rem;
+    font-size: 1.5rem;
+    /* background: #f4f7fa; */
+}
+.search-wrapper input{
+    height: 100%;
+    padding: .5rem;
+    /* background: #f4f7fa; */
+    border: none;
+    outline: none;
+}
+
+table{
+    border-collapse: collapse;
+    /* background-color: #fc0; */
+}
+table input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+}
+
+thead tr{
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+thead td{
+    font-weight: 700;
+    padding: .7rem 1rem;
+    font-size: .9rem;
+    color: #222;
+}
+
+tbody td{
+    padding: 1rem 1rem;
+    font-size: .9rem;
+    color: #222;
+}
+tbody td.user-detail{
+    width: 400px;
+    /* background-color: red; */
+    padding-right: 110px;
+}
+td > div{
+    display: inline-block;
+    height: 50px;
+    /* background-color: chocolate; */
+}
+td div.img{
+    /* background-color: #fc0; */
+    width: 50px;
+    height: 50px;
+    float: left;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: back .9s infinite;
+}
+@keyframes back {
+
+    0%{
+        background-color: #ddd;
+    }
+    50%{
+        background-color: #eee;
+    }
+    100%{
+        background-color: #ddd;
+    }
+    
+}
+td div.img img{
+    width: 100%;
+    height: 100%;
+    /* display: none; */
+}
+td div.text{
+    float: right;
+}
+td div.text span{
+    font-size: smaller;
+    color: #aaa;
+}
+td div.clearfix{
+    clear: both;
+}
