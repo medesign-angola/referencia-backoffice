@@ -48,6 +48,10 @@ table{
     border-collapse: collapse;
     /* background-color: #fc0; */
 }
+table input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+}
 
 thead tr{
     border-top: 1px solid #f0f0f0;
@@ -73,10 +77,10 @@ td .status{
 
 }
 
-tr td:last-child{
+/* tr td:last-child{
     display: flex;
     align-items: center;
-}
+} */
 
 .status.verde{
     background: green;
@@ -119,3 +123,56 @@ tr td:last-child{
     padding: 10px 20px;
 }
 
+
+tbody td.user-detail{
+    width: 270px;
+    /* background-color: red; */
+    padding-right: 20px;
+}
+tbody tr:nth-child(1){
+    /* background-color: red; */
+}
+td > div{
+    display: inline-block;
+    height: 50px;
+    /* background-color: chocolate; */
+}
+td div.img{
+    /* background-color: #fc0; */ 
+    width: 50px;
+    height: 50px; 
+    float: left;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: back .9s infinite;
+}
+@keyframes back {
+
+    0%{
+        background-color: #ddd;
+    }
+    50%{
+        background-color: #eee;
+    }
+    100%{
+        background-color: #ddd;
+    }
+    
+}
+td div.img img{
+    width: 100%;
+    height: 100%;
+    /* display: none; */
+}
+td div.text{
+    /* float: right; */
+    margin-left: 20px;
+}
+td div.text span{
+    font-size: smaller;
+    color: #aaa;
+}
+td div.clearfix{
+    clear: both;
+}
