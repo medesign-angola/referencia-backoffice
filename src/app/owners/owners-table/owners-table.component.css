@@ -48,6 +48,10 @@ table{
     border-collapse: collapse;
     /* background-color: #fc0; */
 }
+table input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+}
 
 thead tr{
     border-top: 1px solid #f0f0f0;
@@ -66,6 +70,11 @@ tbody td{
     font-size: .9rem;
     color: #222;
 }
+tbody td.user-detail{
+    width: 350px;
+    /* background-color: red; */
+    padding-right: 50px;
+}
 td > div{
     display: inline-block;
     height: 50px;
@@ -77,9 +86,12 @@ td div.img{
     height: 50px;
     float: left;
     position: relative;
+    border-radius: 10px;
+    overflow: hidden;
 }
 td div.img img{
     width: 100%;
+    height: 100%;
 }
 td div.text{
     float: right;
