@@ -71,9 +71,9 @@ tbody td{
     color: #222;
 }
 tbody td.user-detail{
-    width: 400px;
+    width: 330px;
     /* background-color: red; */
-    padding-right: 110px;
+    padding-right: 60px;
 }
 td > div{
     display: inline-block;
