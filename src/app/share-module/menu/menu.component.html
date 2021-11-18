@@ -25,7 +25,7 @@
             <span class="icon">
               <img width="23" src="assets/Icons/icone -3 User.svg" alt="">
             </span>
-            <span class="text">Proprietarios</span>
+            <span class="text">Proprietários</span>
           </a>
         </li>
         <li>
@@ -43,7 +43,7 @@
           <span class="text">Usuários</span></a>
         </li>
         <li>
-          <a routerLink="/admin/definicoes" routerLinkActive="active">
+          <a style="cursor: pointer;" (click)="showSettings()">
             <span class="icon">
               <img width="23" src="assets/Icons/Setting.svg" alt="">
             </span>
@@ -71,3 +71,51 @@
   
   </div>
 </header>
+<!-- <app-settings></app-settings> -->
+
+<!-- MODAL -->
+
+<div class="settings">
+  <div class="settings-background"  (click)="fadeOut()" [ngClass]="hide == true ? 'close': 'apear'"></div>
+  <div class="settings-panel" [ngClass]="hide == true ? 'hided': 'non-hided'">
+    <div class="panel-header">
+        Definições
+        <span><a (click)="fadeOut()">&#10006;</a></span>
+    </div>
+    <div class="panel-banner">
+        <div class="panel-img">
+            <img src="assets/Imagens/settings/bnr.jpg" alt="">
+        </div>
+    </div>
+    <div class="panel-body">
+      <div class="theme-mode">
+          <div class="title">
+              <h4>Trocar para o modo escuro</h4>
+          </div>
+          <div class="input">
+              <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+              </label>
+          </div>
+      </div>
+
+      <div class="bar-mode">
+          <div class="title">
+              <h4>Trocar barra lateral para Ralável</h4>
+          </div>
+          <div class="input">
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+          </div>
+      </div>
+      <div class="button">
+          <button>
+              Definições Padrão
+          </button>
+      </div>
+    </div>
+  </div>
+</div>

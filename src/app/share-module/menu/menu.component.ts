@@ -31,6 +31,7 @@ export class MenuComponent implements OnInit {
     // console.log(this.acti.snapshot.url.join(''));
     // console.log(this.router.rou());
     this.check();
+    this.checkSettings();
   }
 
   seeTheActive(link){
@@ -72,6 +73,29 @@ export class MenuComponent implements OnInit {
         }
       }
     })
+  }
+
+  hide = true;
+  visible;
+  rightMove;
+
+
+  checkSettings(){
+    if(this.hide){
+      this.visible = false;
+      this.rightMove = -100;
+    } else{
+      this.visible = true;
+      this.rightMove = 0;
+    }
+  }
+  
+  showSettings(){
+    this.hide = false;
+  }
+
+  fadeOut(){
+    this.hide = true;
   }
 
 }
