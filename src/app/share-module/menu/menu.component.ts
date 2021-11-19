@@ -16,13 +16,40 @@ export class MenuComponent implements OnInit {
     ) { }
 
   title: any = this.check();
+
+  
   url: string;
+  imovel_icon: string = "assets/Icons/Activity.svg";
+  dash_icon: string = "assets/Icons/icone -3 User.svg";
+  proprietarios_icon: string = "assets/Icons/icone -3 User.svg";
+  solici_icon: string = "assets/Icons/Paper.svg";
+  users_icon: string = "assets/Icons/icone -3 User.svg";
+  defin_icon: string = "assets/Icons/Setting.svg";
 
   ngOnInit(): void {
     //  console.log(this.router);
     // console.log(this.acti.snapshot.url.join(''));
     // console.log(this.router.rou());
     this.check();
+    this.checkSettings();
+  }
+
+  seeTheActive(link){
+    if( link === 'Imóveis'){
+
+      this.imovel_icon = this.imovel_icon+"_w.svg";
+
+    }else if( link === 'Proprietários' ){
+      this.proprietarios_icon = this.proprietarios_icon+"_w.svg";
+    }else if( link === 'Dashboard' ){
+      this.title = "Dashboard";
+    }else if( link === 'Solicitações' ){
+      this.title = "Solicitações";
+    }else if( link === 'Usuários' ){
+      this.title = "Usuários";
+    }else if( link === 'Definições' ){
+      this.title = "Definições";
+    }
   }
 
   check(){
@@ -32,6 +59,7 @@ export class MenuComponent implements OnInit {
         // console.log(this.title);
         if( this.url === '/admin/imoveis'){
           this.title = "Imóveis";
+
         }else if( this.url === '/admin/proprietarios' ){
           this.title = "Proprietários";
         }else if( this.url === '/admin/dashboard' ){
@@ -45,6 +73,29 @@ export class MenuComponent implements OnInit {
         }
       }
     })
+  }
+
+  hide = true;
+  visible;
+  rightMove;
+
+
+  checkSettings(){
+    if(this.hide){
+      this.visible = false;
+      this.rightMove = -100;
+    } else{
+      this.visible = true;
+      this.rightMove = 0;
+    }
+  }
+  
+  showSettings(){
+    this.hide = false;
+  }
+
+  fadeOut(){
+    this.hide = true;
   }
 
 }

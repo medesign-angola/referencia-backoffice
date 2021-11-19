@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { UserMyaccountHeaderComponent } from './user-myaccount-header/user-myaccount-header.component';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
+import { SettingsComponent } from './settings/settings.component';
 
 
 
 @NgModule({
   declarations: [
     UserMyaccountHeaderComponent,
-    MenuComponent
+    MenuComponent,
+    SettingsComponent
   ],
   imports: [
     CommonModule,
