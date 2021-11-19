@@ -14,6 +14,7 @@ app.get('/', function(req, resp){
     resp.send("Hello from server")
 })
 
+
 app.listen(PORT, function(){
     console.log('Servidor está a rodar na porta: '+PORT);
 })
