@@ -172,7 +172,7 @@ header label span{
     opacity: .4;
 }
 
-.close{
+.close{ 
     position: fixed;
     background-color: #000;
     width: 100%;
