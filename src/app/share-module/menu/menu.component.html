@@ -9,21 +9,21 @@
         <li>
           <a routerLink="/admin/dashboard" routerLinkActive="active">
             <span class="icon">
-              <img width="23" src="assets/Icons/icone -3 User.svg" alt="">
+              <img width="23" [src]="this.dash_icon" alt="">
             </span>
           <span class="text">Dashboard</span></a>
         </li>
         <li>
           <a routerLink="/admin/imoveis" routerLinkActive="active">
             <span class="icon">
-              <img width="23" src="assets/Icons/Activity.svg" alt="">
+              <img width="23" [src]="this.imovel_icon" alt="">
             </span>
           <span class="text">Imoveis</span></a>
         </li>
         <li>
           <a routerLink="/admin/proprietarios" routerLinkActive="active">
             <span class="icon">
-              <img width="23" src="assets/Icons/icone -3 User.svg" alt="">
+              <img width="23" [src]="this.proprietarios_icon" alt="">
             </span>
             <span class="text">Proprietários</span>
           </a>
@@ -31,21 +31,21 @@
         <li>
           <a routerLink="/admin/solicitacoes" routerLinkActive="active">
             <span class="icon">
-              <img width="23" src="assets/Icons/Paper.svg" alt="">
+              <img width="23" [src]="this.solici_icon" alt="">
             </span>
           <span class="text">Solicitações</span></a>
         </li>
         <li>
           <a routerLink="/admin/usuarios" routerLinkActive="active">
             <span class="icon">
-              <img width="23" src="assets/Icons/icone -3 User.svg" alt="">
+              <img width="23" [src]="this.users_icon" alt="">
             </span>
           <span class="text">Usuários</span></a>
         </li>
         <li>
           <a style="cursor: pointer;" (click)="showSettings()">
             <span class="icon">
-              <img width="23" src="assets/Icons/Setting.svg" alt="">
+              <img width="23" [src]="this.defin_icon" alt="">
             </span>
           <span class="text">Definições</span></a>
         </li>

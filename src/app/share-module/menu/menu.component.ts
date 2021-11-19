@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Event, NavigationEnd } from '@angular/router';
-import { Location } from '@angular/common';
+import { AsyncPipe, Location } from '@angular/common';
 
 @Component({
   selector: 'app-menu',
@@ -19,37 +19,17 @@ export class MenuComponent implements OnInit {
 
   
   url: string;
-  imovel_icon: string = "assets/Icons/Activity.svg";
-  dash_icon: string = "assets/Icons/icone -3 User.svg";
-  proprietarios_icon: string = "assets/Icons/icone -3 User.svg";
-  solici_icon: string = "assets/Icons/Paper.svg";
-  users_icon: string = "assets/Icons/icone -3 User.svg";
-  defin_icon: string = "assets/Icons/Setting.svg";
+  icon_format = ".svg";
+  imovel_icon: string = "assets/Icons/Activity"+this.icon_format;
+  dash_icon: string = "assets/Icons/icone -3 User"+this.icon_format;
+  proprietarios_icon: string = "assets/Icons/icone -3 User"+this.icon_format;
+  solici_icon: string = "assets/Icons/Paper"+this.icon_format;
+  users_icon: string = "assets/Icons/icone -3 User"+this.icon_format;
+  defin_icon: string = "assets/Icons/Setting"+this.icon_format;
 
   ngOnInit(): void {
-    //  console.log(this.router);
-    // console.log(this.acti.snapshot.url.join(''));
-    // console.log(this.router.rou());
     this.check();
     this.checkSettings();
-  }
-
-  seeTheActive(link){
-    if( link === 'Imóveis'){
-
-      this.imovel_icon = this.imovel_icon+"_w.svg";
-
-    }else if( link === 'Proprietários' ){
-      this.proprietarios_icon = this.proprietarios_icon+"_w.svg";
-    }else if( link === 'Dashboard' ){
-      this.title = "Dashboard";
-    }else if( link === 'Solicitações' ){
-      this.title = "Solicitações";
-    }else if( link === 'Usuários' ){
-      this.title = "Usuários";
-    }else if( link === 'Definições' ){
-      this.title = "Definições";
-    }
   }
 
   check(){
@@ -58,18 +38,50 @@ export class MenuComponent implements OnInit {
         this.url = (<NavigationEnd>event).url;
         // console.log(this.title);
         if( this.url === '/admin/imoveis'){
+
           this.title = "Imóveis";
+          this.imovel_icon = "assets/Icons/Activity_w"+this.icon_format;
+          this.dash_icon = "assets/Icons/icone -3 User"+this.icon_format;
+          this.proprietarios_icon = "assets/Icons/icone -3 User"+this.icon_format;
+          this.solici_icon = "assets/Icons/Paper"+this.icon_format;
+          this.users_icon = "assets/Icons/icone -3 User"+this.icon_format;
 
         }else if( this.url === '/admin/proprietarios' ){
+
           this.title = "Proprietários";
+          this.imovel_icon = "assets/Icons/Activity"+this.icon_format;
+          this.dash_icon = "assets/Icons/icone -3 User"+this.icon_format;
+          this.proprietarios_icon = "assets/Icons/icone -3 User_w"+this.icon_format;
+          this.solici_icon = "assets/Icons/Paper"+this.icon_format;
+          this.users_icon = "assets/Icons/icone -3 User"+this.icon_format;
+
         }else if( this.url === '/admin/dashboard' ){
+
           this.title = "Dashboard";
+          this.imovel_icon = "assets/Icons/Activity"+this.icon_format;
+          this.dash_icon = "assets/Icons/icone -3 User_w"+this.icon_format;
+          this.proprietarios_icon = "assets/Icons/icone -3 User"+this.icon_format;
+          this.solici_icon = "assets/Icons/Paper"+this.icon_format;
+          this.users_icon = "assets/Icons/icone -3 User"+this.icon_format;
+
         }else if( this.url === '/admin/solicitacoes' ){
+
           this.title = "Solicitações";
+          this.imovel_icon = "assets/Icons/Activity"+this.icon_format;
+          this.dash_icon = "assets/Icons/icone -3 User"+this.icon_format;
+          this.proprietarios_icon = "assets/Icons/icone -3 User"+this.icon_format;
+          this.solici_icon = "assets/Icons/Paper_w"+this.icon_format;
+          this.users_icon = "assets/Icons/icone -3 User"+this.icon_format;
+
         }else if( this.url === '/admin/usuarios' ){
+
           this.title = "Usuários";
-        }else if( this.url === '/admin/definicoes' ){
-          this.title = "Definições";
+          this.imovel_icon = "assets/Icons/Activity"+this.icon_format;
+          this.dash_icon = "assets/Icons/icone -3 User"+this.icon_format;
+          this.proprietarios_icon = "assets/Icons/icone -3 User"+this.icon_format;
+          this.solici_icon = "assets/Icons/Paper"+this.icon_format;
+          this.users_icon = "assets/Icons/icone -3 User_w"+this.icon_format;
+
         }
       }
     })
