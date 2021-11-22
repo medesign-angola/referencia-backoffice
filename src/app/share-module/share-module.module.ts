@@ -4,6 +4,8 @@ import { UserMyaccountHeaderComponent } from './user-myaccount-header/user-myacc
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { SettingsComponent } from './settings/settings.component';
+import { FooterComponent } from './footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -11,14 +13,17 @@ import { SettingsComponent } from './settings/settings.component';
   declarations: [
     UserMyaccountHeaderComponent,
     MenuComponent,
-    SettingsComponent
+    SettingsComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FontAwesomeModule
   ],
   exports: [
     MenuComponent,
+    FooterComponent,
     UserMyaccountHeaderComponent
   ]
 })

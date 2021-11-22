@@ -1,0 +1,71 @@
+.content{
+    position: relative;
+}
+.title{}
+.title h3{
+    font-family: var(--font-family-Poppins-L);
+}
+.title ul{
+    /* float: right; */
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+.title ul li{
+    list-style: none;
+}
+.title ul li a{
+    text-decoration: none;
+    margin: 3px;
+    padding: 5px 10px;
+    background-color: #f7f8f9;
+    border-radius: 5px;
+}
+.request-image{
+    margin: 20px 0px;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.request-image img{
+    width: 100%;
+    height: 100%;
+}
+.details-of-user{
+}
+.details-of-user h4{
+    margin: 5px 0px;
+}
+.details-of-user p{
+    font-family: var(--font-family-Poppins-L);
+}
+.details-of-user span{
+    font-family: var(--font-family-Poppins-L);
+}
+.details-of-user span fa-icon{
+    color: #ffb717;
+}
+.description{
+    margin: 10px 0px;
+}
+.description p{
+    font-family: var(--font-family-Poppins-L);
+}
+.price{
+    font-size: large;
+    margin: 100px 0px;
+}
+.button{
+    margin: 20px 0px;
+    text-align: center;
+}
+.button button{
+    padding: 10px;
+    width: 80%;
+    background-color: #2499ff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}

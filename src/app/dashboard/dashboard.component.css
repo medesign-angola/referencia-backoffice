@@ -1,0 +1,32 @@
+.body-first-content{
+    /* background-color: #fc0; */
+    padding: 1rem 2rem;
+}
+.body-first-content > div{
+    /* display: inline-block; */
+    height: 630px;
+}
+.charts{
+    /* background-color: red; */
+    width: 750px;
+    float: left;
+    /* background-color: blue; */
+}
+.charts > div{}
+.charts .four-blocks{
+    /* background-color: violet; */
+}
+.charts .user-status{
+    padding: 20px 0px;
+    /* background-color: turquoise; */
+}
+
+.recent-requests{
+    float: right;
+    width: 330px;
+    /* background-color: #fc0; */
+    padding: 20px;
+}
+.clearfix{
+    clear: both;
+}

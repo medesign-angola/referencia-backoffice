@@ -8,6 +8,7 @@ import { BlocksComponent } from './blocks/blocks.component';
 import { RecentRequestsComponent } from './recent-requests/recent-requests.component';
 import { UserStatusComponent } from './user-status/user-status.component';
 import { SalesPerProvinceComponent } from './sales-per-province/sales-per-province.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { SalesPerProvinceComponent } from './sales-per-province/sales-per-provin
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    FontAwesomeModule
   ]
 })
 export class DashboardModule { }
