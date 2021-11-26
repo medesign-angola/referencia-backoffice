@@ -5,6 +5,7 @@ import { RequestsRoutingModule } from './requests-routing.module';
 import { RequestsComponent } from './requests.component';
 import { HeaderComponent } from './header/header.component';
 import { RequestsTableComponent } from './requests-table/requests-table.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { RequestsTableComponent } from './requests-table/requests-table.componen
   ],
   imports: [
     CommonModule,
-    RequestsRoutingModule
+    RequestsRoutingModule,
+    FontAwesomeModule
   ]
 })
 export class RequestsModule { }

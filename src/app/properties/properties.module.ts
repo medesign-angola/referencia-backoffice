@@ -6,6 +6,7 @@ import { PropertiesComponent } from './properties.component';
 import { HeaderComponent } from './header/header.component';
 import { PropertiesTableComponent } from './properties-table/properties-table.component';
 import { ShareModuleModule } from '../share-module/share-module.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ShareModuleModule } from '../share-module/share-module.module';
   imports: [
     CommonModule,
     PropertiesRoutingModule,
+    FontAwesomeModule
   ]
 })
 export class PropertiesModule { }

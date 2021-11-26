@@ -16,6 +16,6 @@ export class FooterComponent implements OnInit {
   
   faFacebook = faFacebookSquare;
   faTwitter = faTwitter;
-  faInsta = faInstagramSquare
+  faInsta = faInstagramSquare;
 
 }

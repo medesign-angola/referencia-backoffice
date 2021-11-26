@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-properties-table',
@@ -11,5 +12,7 @@ export class PropertiesTableComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  star = faStar;
 
 }

@@ -28,6 +28,20 @@
     position: relative;
     border-radius: 10px;
     overflow: hidden;
+    animation: back .9s infinite;
+}
+@keyframes back {
+
+    0%{
+        background-color: #ddd;
+    }
+    50%{
+        background-color: #eee;
+    }
+    100%{
+        background-color: #ddd;
+    }
+    
 }
 .request-image img{
     width: 100%;
@@ -42,7 +56,7 @@
     font-family: var(--font-family-Poppins-L);
 }
 .details-of-user span{
-    font-family: var(--font-family-Poppins-L);
+    font-family: var(--font-family-Poppins-M);
 }
 .details-of-user span fa-icon{
     color: #ffb717;
@@ -54,6 +68,7 @@
     font-family: var(--font-family-Poppins-L);
 }
 .price{
+    font-family: var(--font-family-Poppins-M);
     font-size: large;
     margin: 100px 0px;
 }
@@ -67,5 +82,5 @@
     background-color: #2499ff;
     color: #fff;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
 }

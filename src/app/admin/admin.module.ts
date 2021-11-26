@@ -26,6 +26,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CommonModule,
     AdminRoutingModule,
     ShareModuleModule,
+    FontAwesomeModule
   ],
 })
 export class AdminModule { }

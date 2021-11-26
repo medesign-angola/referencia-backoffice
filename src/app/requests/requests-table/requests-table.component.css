@@ -175,8 +175,12 @@ td div.text{
     margin-left: 20px;
 }
 td div.text span{
-    font-size: smaller;
-    color: #aaa;
+    font-size: small;
+    color: #606060;
+}
+fa-icon{
+    color: #ffb415;
+    margin-right: 10px;
 }
 td div.clearfix{
     clear: both;
