@@ -106,7 +106,7 @@ export class SignInComponent implements OnInit {
       // console.log(error.error);
 
       // this._authService.setAuthMessages(error);
-      this.toastrService.error("Verifique a sua conexão à internet.", 'Comunicação com o servidor', {
+      this.toastrService.error("Verifique a sua conexão à internet.", 'Erro de comunicação', {
         timeOut: 3000,
       });
       this.incorrect = true;
