@@ -12,10 +12,11 @@ export class InMemoryDataService implements InMemoryDbService {
 
   createDb(){
     const users = [
-      { id: 1, 'username': 'isaquias', 'password': 'pati', 'email': 'pati@gmail.com' }
+      { 'id': 1, 'username': 'isaquias', 'password': 'pati', 'email': 'pati@gmail.com' },
+      { 'id': 2, 'username': 'pati', 'password': 'isaquias', 'email': 'isaquias@gmail.com' },
     ];
 
-    return users;
+    return {users};
   }
 
    // HTTP POST interceptor

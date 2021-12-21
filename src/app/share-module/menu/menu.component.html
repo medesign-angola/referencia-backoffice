@@ -65,9 +65,57 @@
   </div>
 
   <div class="user-wrapper">
-    
-    <img src="assets/Icons/notificatio_sign.svg" width="20px" alt="" style="cursor: pointer;">
-    <img src="assets/Icons/Perfil_user.svg" width="40px" alt="" style="cursor: pointer;">
+    <a *ngIf="notifications > 0">
+      <img src="assets/Icons/notificatio_sign.svg" width="22px" alt="" style="cursor: pointer;">
+    </a>
+    <a *ngIf="notifications < 1">
+      <img src="assets/Icons/Notifi_no_red_circle.svg" width="22px" alt="" style="cursor: pointer;">
+    </a>
+    <a (click)="user_toggle()">
+      <div class="user-profile">
+        <img src="assets/Imagens/solicitacoes/image.jpg" width="100%" height="100%" alt="" style="cursor: pointer;">
+      </div>
+    </a>
+    <div class="user-detail-modal" [ngClass]="{'modal-show' : user_modal_visible == true, 'modal-hide' : user_modal_visible == false}">
+      <div class="user-modal-header">
+        <div class="_image">
+          <img width="50" src="assets/Imagens/solicitacoes/image.jpg" alt="">
+        </div>
+        <div class="_details">{{this.user_name}} <br> <span>{{this.user_role}}</span></div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="list-items">
+        <ul>
+          <li>
+            <a>
+              <div class="_icon">
+                <img [src]="this.user_icon" alt="">
+              </div>
+              <div class="_item_name">Minha Conta</div>
+              <div class="clearfix"></div>
+            </a>
+          </li>
+          <li>
+            <a>
+              <div class="_icon">
+                <img [src]="this.support_icon" alt="">
+              </div>
+              <div class="_item_name">Suporte</div>
+              <div class="clearfix"></div>
+            </a>
+          </li>
+          <li>
+            <a (click)="logout()">
+              <div class="_icon">
+                <img [src]="this.logout_icon" alt="">
+              </div>
+              <div class="_item_name">Terminar Sessão</div>
+              <div class="clearfix"></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   
   </div>
 </header>

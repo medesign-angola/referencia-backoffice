@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 // import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { CanActivate, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
 
 import { AuthService } from './core-module/auth-service/auth.service';
@@ -17,14 +18,26 @@ export class AuthGuard implements CanActivate {
 
   constructor(
     private router: Router,
-    private _auth: AuthService
+    private _auth: AuthService,
+    private toastrService: ToastrService
     ){}
   
+    message: string;
+
   canActivate():boolean {
     if(this._auth.isLoggedIn()){
       return true;
     }else{
-      this.router.navigate(['/'])
+
+      this.message = 'Entre com as suas credenciais!';
+
+      // this._auth.setAuthMessages(this.message);
+
+      this.toastrService.error(this.message, 'Erro', {
+        timeOut: 3000,
+      });
+
+      this.router.navigate(['/login'])
       return false;
     }
   }

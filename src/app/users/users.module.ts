@@ -5,6 +5,7 @@ import { UsersRoutingModule } from './users-routing.module';
 import { UsersComponent } from './users.component';
 import { HeaderComponent } from './header/header.component';
 import { UsersTableComponent } from './users-table/users-table.component';
+import { Title } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -18,4 +19,8 @@ import { UsersTableComponent } from './users-table/users-table.component';
     UsersRoutingModule
   ]
 })
-export class UsersModule { }
+export class UsersModule { 
+  constructor(private title: Title){
+    this.title.setTitle("Usuários - Referência");
+  }
+ }

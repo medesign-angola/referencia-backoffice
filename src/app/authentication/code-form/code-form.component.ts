@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-code-form',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CodeFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private title: Title) { 
+    this.title.setTitle("Recuperar minha senha - Referência");
+   }
 
   codeResent: boolean = false;
 

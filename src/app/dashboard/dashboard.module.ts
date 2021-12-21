@@ -9,6 +9,7 @@ import { RecentRequestsComponent } from './recent-requests/recent-requests.compo
 import { UserStatusComponent } from './user-status/user-status.component';
 import { SalesPerProvinceComponent } from './sales-per-province/sales-per-province.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { Title } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -26,4 +27,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FontAwesomeModule
   ]
 })
-export class DashboardModule { }
+export class DashboardModule { 
+  constructor(private title: Title){
+    this.title.setTitle("Dashboard - Referência");
+  }
+ }

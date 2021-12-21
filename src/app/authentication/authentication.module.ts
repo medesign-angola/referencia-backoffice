@@ -8,6 +8,11 @@ import { EmailVerificationComponent } from './email-verification/email-verificat
 import { RouterModule } from '@angular/router';
 import { CodeFormComponent } from './code-form/code-form.component';
 import { EmailFormComponent } from './email-form/email-form.component';
+import { Title } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { JwtModule } from '@auth0/angular-jwt';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -22,7 +27,11 @@ import { EmailFormComponent } from './email-form/email-form.component';
   imports: [
     CommonModule,
     AuthenticationRoutingModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    JwtModule,
+    // ToastrModule.forRoot(),
   ],
   exports: [
     SignInComponent,
@@ -31,4 +40,7 @@ import { EmailFormComponent } from './email-form/email-form.component';
     EmailFormComponent
   ]
 })
-export class AuthenticationModule { }
+export class AuthenticationModule { 
+  constructor(private title: Title){
+  }
+ }
