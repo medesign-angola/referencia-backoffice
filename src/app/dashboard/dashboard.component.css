@@ -4,11 +4,11 @@
 }
 .body-first-content > div{
     /* display: inline-block; */
-    height: 630px;
+    /* height: 650px; */
 }
 .charts{
-    /* background-color: red; */
     width: 750px;
+    position: relative;
     float: left;
     /* background-color: blue; */
 }
@@ -18,12 +18,13 @@
 }
 .charts .user-status{
     padding: 20px 0px;
+    margin: 20px 30px;
     /* background-color: turquoise; */
 }
 
 .recent-requests{
     float: right;
-    width: 350px;
+    width: 390px;
     /* background-color: #fc0; */
     padding: 20px;
 }
@@ -35,4 +36,5 @@
 .body-last-content{
     /* background-color: blue; */
     padding: 1rem 2rem;
+    position: relative;
 }

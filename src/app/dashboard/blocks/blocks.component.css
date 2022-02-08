@@ -1,7 +1,7 @@
 div.block{
     /* background-color: orange; */
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 15px;
     width: 310px;
     /* height: 110px; */
     margin: 20px 30px;
@@ -18,7 +18,7 @@ div.block{
     float: left;
 }
 .left-text .title{
-    margin: 10px 0px 30px 0px; 
+    margin: 10px 0px 30px 0px;
 }
 .left-text .title h4{
     font-family: var(--font-family-Poppins-L);

@@ -61,27 +61,28 @@ export class SignInComponent implements OnInit {
   submit(): void{
     this._authService.login(this.form.getRawValue()).subscribe(
     (response: any) => {
-      // console.log(response);
-      
-      // localStorage.setItem('token', response.access_token);
 
-      // this.router.navigate(['/admin/']);
-      if(response.status){
-        // this._authService.setAuthMessages(response.status);
+
+      if(response.auth_status == "invalid" && response.status == 401){
+
         this.incorrect = true;
         
-        this.toastrService.error(response.status, 'Erro', {
+        this.toastrService.error(response.message, 'Acesso negado', {
           timeOut: 3000,
         });
 
         this.form.get('email').reset();
         this.form.get('password').reset();
-      }else{
-        if(!response.access_token || response.access_token == ""){
-          this._authService.setAuthMessages('Erro ao fazer o login, tente novamente!');
-        }else{
 
-          
+      }else if(response.auth_status == "valid" && response.status == 200){
+
+        if(!response.access_token || response.access_token == ""){
+
+          this.toastrService.error("Alguma coisa correu mal, tente novamente!", 'Ops!', {
+            timeOut: 3000,
+          });
+
+        }else{
 
         this.form.get('email').reset();
         this.form.get('password').reset();
@@ -100,8 +101,15 @@ export class SignInComponent implements OnInit {
           // console.log(isexp);
           
         }
+
+      }else{
+
+        this.toastrService.error("Alguma coisa correu mal, tente novamente!", 'Ops!', {
+          timeOut: 3000,
+        });
+
       }
-    }, 
+    },
     (error: any) => {
       // console.log(error.error);
 
@@ -109,10 +117,9 @@ export class SignInComponent implements OnInit {
       this.toastrService.error("Verifique a sua conexão à internet.", 'Erro de conectividade', {
         timeOut: 3000,
       });
-      this.incorrect = true;
 
       // console.log(this.errors);
-      // this.errors = error.error;
+      this.errors = error.error;
     }
     );
   }
