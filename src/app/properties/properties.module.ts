@@ -6,6 +6,8 @@ import { PropertiesComponent } from './properties.component';
 import { HeaderComponent } from './header/header.component';
 import { PropertiesTableComponent } from './properties-table/properties-table.component';
 import { ShareModuleModule } from '../share-module/share-module.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { Title } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -17,6 +19,11 @@ import { ShareModuleModule } from '../share-module/share-module.module';
   imports: [
     CommonModule,
     PropertiesRoutingModule,
+    FontAwesomeModule
   ]
 })
-export class PropertiesModule { }
+export class PropertiesModule { 
+  constructor(private title: Title){
+    this.title.setTitle("Imóveis - Referência");
+  }
+ }

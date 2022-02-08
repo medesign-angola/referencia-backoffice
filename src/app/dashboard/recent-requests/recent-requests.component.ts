@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-recent-requests',
@@ -11,5 +12,7 @@ export class RecentRequestsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  star = faStar;
 
 }

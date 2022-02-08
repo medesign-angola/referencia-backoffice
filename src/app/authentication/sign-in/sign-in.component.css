@@ -67,7 +67,7 @@ div.submit{
     width: 100%;
     margin: 0px 0px 20px 0px;
 }
-div.submit input{
+div.submit button{
     width: 100%;
     color: #fff;
     border: none;
@@ -76,6 +76,10 @@ div.submit input{
     cursor: pointer;
     border-radius: 3px;
 }
+div.submit button:disabled{
+    background-color: #87c1f5;
+    cursor: not-allowed;
+}
 div.navigation{
     text-align: center;
 }
@@ -83,4 +87,8 @@ div.navigation span{}
 div.navigation span a{
     text-decoration: none;
     color: #2499ff;
+}
+.panelMessages{
+    text-align: center;
+    padding: 10px;
 }

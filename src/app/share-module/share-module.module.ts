@@ -4,6 +4,10 @@ import { UserMyaccountHeaderComponent } from './user-myaccount-header/user-myacc
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { SettingsComponent } from './settings/settings.component';
+import { FooterComponent } from './footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -11,14 +15,19 @@ import { SettingsComponent } from './settings/settings.component';
   declarations: [
     UserMyaccountHeaderComponent,
     MenuComponent,
-    SettingsComponent
+    SettingsComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FontAwesomeModule,
+    ToastrModule,
+    BrowserAnimationsModule
   ],
   exports: [
     MenuComponent,
+    FooterComponent,
     UserMyaccountHeaderComponent
   ]
 })

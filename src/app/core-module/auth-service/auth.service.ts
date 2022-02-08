@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { UserModel } from '../models/user/user';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,56 +14,54 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  private userUrl = 'api/login';
+  // private userUrl = 'api/users';
+
+  private domain = environment.apiUrl;
+
+  // private domain = "https://api-referencia.medesign-angola.com/api/";
+
+  private loginUrl = this.domain + "login";
+  // private loginUrl = "https://api-referencia.medesign-angola.com/api/login";
+  // private userAuthenticatdUrl = "https://api-referencia.medesign-angola.com/api/user";
+  private userLogoutUrl = this.domain + "logout";
+  private userAuthenticatdUrl = this.domain + "user";
 
   isLoggedIn():boolean {
     return !!localStorage.getItem('token');
   }
   
-
-  credentials = [
-    {
-      id: 1,
-      email: 'pati@gmail.com',
-      password: 'pati',
-      username: 'Isaquias Marques'
-    },
-    {
-      id: 2,
-      email: 'isaquias@gmail.com',
-      password: 'isaquias',
-      username: 'Pati Marques'
-    }
-  ];
-
-  user = [];
-
-  check(email: string){
-    if(email === "pati@gmail.com"){
-
-      return email === "pati@gmail.com";
-
-    }else if(email === "isaquias@gmail.com"){
-
-      return email === "isaquias@gmail.com";
-
-    }else{
-      return "Invalid Credentials!";
-    }
+  login(user: any): Observable<UserModel>{
+    return this.http.post<UserModel>(this.loginUrl, user);
   }
 
-  logIn(username: string){
+  // protected headers = new HttpHeaders({
+  //   'Authorization': `Bearer ${localStorage.getItem('token')}`
+  // });
 
-    
-    this.user = this.credentials.filter(x => x.email === "pati@gmail")
+  protected headers = new HttpHeaders({
+    'Authorization': `Bearer ${localStorage.getItem('token')}`
+  });
 
-    return this.user['email'];
-    
+  getUserAuthenticated(){
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    });
+    return this.http.get<any>(this.userAuthenticatdUrl, {headers: headers});
+  }
 
-    // credentials.filter()
+  userLogout(){
+    // let header = new HttpHeaders({
+    //   'Auth6orization': `Bearer ${localStorage.getItem('token')}`
+    // });
+    return this.http.post(this.userLogoutUrl, {headers: this.headers});
+  }
 
-    // const url = `${this.userUrl}/`;
-    // return ;
+  private subject = new Subject<string>();
+  setAuthMessages(message: string){
+    this.subject.next(message)
+  }
+  getAuthMessage(): Observable<string>{
+    return this.subject.asObservable();
   }
 
 }

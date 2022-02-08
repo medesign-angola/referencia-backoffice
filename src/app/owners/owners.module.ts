@@ -5,6 +5,7 @@ import { OwnersRoutingModule } from './owners-routing.module';
 import { OwnersComponent } from './owners.component';
 import { HeaderComponent } from './header/header.component';
 import { OwnersTableComponent } from './owners-table/owners-table.component';
+import { Title } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -18,4 +19,8 @@ import { OwnersTableComponent } from './owners-table/owners-table.component';
     OwnersRoutingModule
   ]
 })
-export class OwnersModule { }
+export class OwnersModule { 
+  constructor(private title: Title){
+    this.title.setTitle("Proprietários - Referência");
+  }
+ }

@@ -15,7 +15,14 @@ import { UsersComponent } from '../users/users.component';
 import { ShareModuleModule } from '../share-module/share-module.module';
 import { PropertiesModule } from '../properties/properties.module';
 import { OwnersModule } from '../owners/owners.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { JwtModule } from '@auth0/angular-jwt';
+import { HttpClientModule } from '@angular/common/http';
 
+
+export function tokenGetter() {
+  return localStorage.getItem("token");
+}
 
 @NgModule({
   declarations: [
@@ -25,6 +32,19 @@ import { OwnersModule } from '../owners/owners.module';
     CommonModule,
     AdminRoutingModule,
     ShareModuleModule,
+    HttpClientModule,
+    FontAwesomeModule,
+    // JwtModule.forRoot({
+    //   config: {
+    //     tokenGetter: tokenGetter,
+    //     allowedDomains: [],
+    //     authScheme: "Bearer ",
+    //     skipWhenExpired: true,
+    //   }
+    // }),
   ],
 })
-export class AdminModule { }
+
+export class AdminModule {
+
+ }

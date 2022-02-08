@@ -12,3 +12,10 @@ main{
     background-color: #fff;
     min-height: calc(100vh - 90px);
 }
+
+.content-footer{
+    padding: 15px 15px;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #8c95a4;
+}

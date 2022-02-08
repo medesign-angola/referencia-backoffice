@@ -140,7 +140,6 @@ td > div{
 td div.img{
     /* background-color: #fc0; */ 
     width: 50px;
-    height: 50px; 
     float: left;
     position: relative;
     border-radius: 10px;
@@ -168,10 +167,15 @@ td div.img img{
 td div.text{
     /* float: right; */
     margin-left: 20px;
+    /* margin-top: -100px; */
 }
 td div.text span{
-    font-size: smaller;
-    color: #aaa;
+    font-size: small;
+    color: #606060;
+}
+fa-icon{
+    color: #ffb415;
+    margin-right: 10px;
 }
 td div.clearfix{
     clear: both;
