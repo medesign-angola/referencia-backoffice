@@ -18,42 +18,44 @@ export class AuthService {
 
   private domain = environment.apiUrl;
 
-  // private domain = "https://api-referencia.medesign-angola.com/api/";
-
-  private loginUrl = this.domain + "login";
-  // private loginUrl = "https://api-referencia.medesign-angola.com/api/login";
-  // private userAuthenticatdUrl = "https://api-referencia.medesign-angola.com/api/user";
-  private userLogoutUrl = this.domain + "logout";
-  private userAuthenticatdUrl = this.domain + "user";
-
   isLoggedIn():boolean {
     return !!localStorage.getItem('token');
   }
+
+  removeTokenAfterLogout(): boolean{
+
+    if(this.isLoggedIn()){
+      
+      localStorage.removeItem('token')
+      
+      return true;
+
+    }else{
+      return false;
+    }
+    
+  }
   
   login(user: any): Observable<UserModel>{
-    return this.http.post<UserModel>(this.loginUrl, user);
-  }
+    let loginUrl = this.domain + "login";
 
+    return this.http.post<UserModel>(loginUrl, user);
+  }
   // protected headers = new HttpHeaders({
   //   'Authorization': `Bearer ${localStorage.getItem('token')}`
   // });
 
-  protected headers = new HttpHeaders({
-    'Authorization': `Bearer ${localStorage.getItem('token')}`
-  });
-
   getUserAuthenticated(){
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer ${localStorage.getItem('token')}`
-    });
-    return this.http.get<any>(this.userAuthenticatdUrl, {headers: headers});
+    let  userAuthenticatdUrl = this.domain + "user?token=" + localStorage.getItem('token');
+
+    return this.http.post<any>(userAuthenticatdUrl, {});
+    
   }
 
   userLogout(){
-    // let header = new HttpHeaders({
-    //   'Auth6orization': `Bearer ${localStorage.getItem('token')}`
-    // });
-    return this.http.post(this.userLogoutUrl, {headers: this.headers});
+    let userAuthenticationLogoutUrl = this.domain + "logout?token=" + localStorage.getItem('token');
+
+    return this.http.post<any>(userAuthenticationLogoutUrl, {});
   }
 
   private subject = new Subject<string>();

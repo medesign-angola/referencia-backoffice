@@ -120,14 +120,27 @@ export class MenuComponent implements OnInit {
 
   // }
   logout(){
-    const token = localStorage.getItem('token');
-    if(token){
-      localStorage.removeItem('token');
+    
+    return this.authService.userLogout().subscribe(res => {
 
-      this.router.navigate(['/login']);
-    }else{
+      if(res.status == 200){
+        if(this.authService.removeTokenAfterLogout()){
 
-    }
+          this.router.navigate(['/']);
+  
+        }else{
+          this.getToasterErrorAlerts('Erro ao tentar sair da sua conta!', 'Erro', 3000);
+        }
+      }else{
+        this.getToasterErrorAlerts('Erro ao tentar sair da sua conta!', 'Erro', 3000);
+      }
+
+    }, err => {
+
+      this.getToasterErrorAlerts(err, 'Erro', 3000);
+      
+    });
+
   }
 
   checkSettings(){
@@ -175,13 +188,19 @@ getAuthenticatedUser(){
     this.user_role = 'Administrador';
 
   }, (err: any) => {
-    // console.log(err);
+    console.log(err);
 
-    this.toastrService.error(err, 'Erro', {
-      timeOut: 3000,
-    });
+    this.getToasterErrorAlerts(err, 'Erro', 3000);
     
   });
+}
+
+getToasterErrorAlerts(message: string, classification: string, timeOutDuration: number){
+
+  return this.toastrService.error(message, classification, {
+    timeOut: timeOutDuration,
+  });
+
 }
 
 }
