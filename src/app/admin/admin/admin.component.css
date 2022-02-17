@@ -1,7 +1,6 @@
 .main-content{
-    margin-top: -50px;
-    margin-left: 305px;
-    background-color: #fc0;
+    /* margin-top: -50px; */
+    margin: -50px 0px 0px 305px;
 }
 .container{
     
@@ -12,10 +11,17 @@ main{
     background-color: #fff;
     min-height: calc(100vh - 90px);
 }
-
-.content-footer{
+app-footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     padding: 15px 15px;
     text-align: center;
     background-color: #f8f9fa;
     color: #8c95a4;
+    margin-top: 50px;
+}
+.admin{
+    position: relative;
 }

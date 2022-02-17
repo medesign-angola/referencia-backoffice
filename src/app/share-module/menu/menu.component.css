@@ -1,12 +1,4 @@
 
-.sidebar .logo{
-    /* background-color: #fc0; */
-    padding: 20px 50px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-bottom: 70px;
-}
 
 .sidebar{
     width: 280px;
@@ -15,7 +7,8 @@
     top: 0;
     height: 100%;
     /* background-color: #fc0; */
-    z-index: 100;
+    z-index: 9;
+    margin-top: 90px;
 }
 .sidebar-menu{
     margin-top: 1rem;
@@ -68,15 +61,36 @@
 header{
     display: flex;
     justify-content: space-between;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem 1rem 0rem;
     position: fixed;
     background-color: #fff;
-    left: 345px;
-    width: calc(100% - 345px);
+    /* left: 345px; */
+    /* width: calc(100% - 345px); */
+    width: 100%;
     top: 0;
-    z-index: 100;
+    z-index: 20;
 }
-header h2{
+
+
+header .logo{
+    /* background-color: #fc0; */
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    /* background-color: #fc0; */
+    position: absolute;
+    top: 0;
+}
+
+header .title{
+    /* position: sticky; */
+    /* background-color: #fc0; */
+    margin-left: 360px;
+    padding: 5px;
+} 
+
+header .title h2{
     color: #00a2ff;
 }
 header label span{
@@ -85,6 +99,7 @@ header label span{
 }
 
 .search-wrapper1{
+    padding: 20px;
     /* border: 1px solid rgb(145, 142, 142); */
     height: 40px;
     /* background-color: red; */
@@ -92,8 +107,8 @@ header label span{
     width: 300px;
     align-items: center;
     position: relative;
-    left: 170px;
-    overflow-x: hidden;
+    /* left: 170px; */
+    overflow: hidden;
     /* background: #f4f7fa; */
 }
 
@@ -149,7 +164,7 @@ header label span{
     display: flex;
     align-items: center;
     overflow-x: hidden;
-    /* background: #f4f7fa; */
+    background: #fc0;
 }
 
 .search-wrapper span{
@@ -161,18 +176,18 @@ header label span{
 .search-wrapper input{
     height: 100%;
     padding: .5rem;
-    /* background: #f4f7fa; */
+    /* background-color: red; */
     border: none;
     outline: none;
 }
 
 .modal-hide{
-    opacity: 0;
-    transition: .3s;
+    /* opacity: 0; */
+    display: none;
 }
 .modal-show{
-    opacity: 1;
-    transition: .3s;
+    /* opacity: 1; */
+    display: block;
 }
 
 .user-detail-modal{

@@ -1,9 +1,5 @@
 
 <div class="sidebar">
-
-  <div class="logo">
-    <img width="80%" src="assets/Logotipo/logotipo.svg" alt="">
-  </div>
   <div class="sidebar-menu">
       <ul>
         <li>
@@ -53,10 +49,14 @@
     </div>
 </div>
 <header>
-  <h2>
-    {{title}}
-  </h2>
-
+  <div class="logo">
+    <a routerLink="/admin/dashboard"><img width="60%" src="assets/Logotipo/logotipo.svg" alt=""></a>
+  </div>
+  <div class="title">
+    <h2>
+      {{title}}
+    </h2>
+  </div>
   <div class="search-wrapper1">
     <span class="">
       <img width="17" src="assets/Icons/icone-pesquisa.svg" alt="">
@@ -81,13 +81,13 @@
         <div class="_image">
           <img width="50" src="assets/Imagens/solicitacoes/image.jpg" alt="">
         </div>
-        <div class="_details">{{this.user_name}} <br> <span>{{this.user_role}}</span></div>
+        <div class="_details">{{userName}} <br> <span>{{userCategory}}</span></div>
         <div class="clearfix"></div>
       </div>
       <div class="list-items">
         <ul>
           <li>
-            <a>
+            <a routerLink="/admin/minha-conta">
               <div class="_icon">
                 <img [src]="this.user_icon" alt="">
               </div>

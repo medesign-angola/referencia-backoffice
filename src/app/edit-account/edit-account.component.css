@@ -1,0 +1,31 @@
+.back{
+    /* position: fixed; */
+    /* background-color: #fff; */
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 15;
+}
+.content{
+    position: absolute;
+    width: 100%;
+    /* height: 100%; */
+    left: 0;
+    top: 0;
+    /* background-color: #fc0; */
+    padding: 40px;
+    z-index: 16;
+    background-color: #fff;
+}
+.prev-button{
+    position: absolute;
+    left: 7%;
+    top: 10%;
+    font-size: x-large;
+    color: #a5a5a5;
+}
+.prev-button a{
+    padding: 10px;
+    cursor: pointer;
+}

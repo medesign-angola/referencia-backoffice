@@ -17,8 +17,6 @@ export class AdminComponent implements OnInit {
     private toastrService: ToastrService
     ) { }
 
-  username = '';
-
   ngOnInit(): void {
     
   }

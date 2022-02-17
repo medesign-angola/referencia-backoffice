@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { EditAccountRoutingModule } from './edit-account-routing.module';
 import { EditAccountComponent } from './edit-account.component';
 import { EditFormComponent } from './edit-form/edit-form.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ShareModuleModule } from '../share-module/share-module.module';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { EditFormComponent } from './edit-form/edit-form.component';
   ],
   imports: [
     CommonModule,
-    EditAccountRoutingModule
+    EditAccountRoutingModule,
+    FontAwesomeModule,
+    ShareModuleModule
   ]
 })
 export class EditAccountModule { }

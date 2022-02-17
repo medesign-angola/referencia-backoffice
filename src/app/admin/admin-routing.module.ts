@@ -1,15 +1,6 @@
  import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from '../auth.guard';
-import { DashboardComponent } from '../dashboard/dashboard.component';
-import { EditAccountComponent } from '../edit-account/edit-account.component';
-import { MyAccountComponent } from '../my-account/my-account.component';
-import { OwnersComponent } from '../owners/owners.component';
-import { PropertiesComponent } from '../properties/properties.component';
-import { RequestsComponent } from '../requests/requests.component';
-import { SettingsComponent } from '../settings/settings.component';
-import { SupportComponent } from '../support/support.component';
-import { UsersComponent } from '../users/users.component';
+import { AuthGuard } from '../core-module/auth-guard/auth.guard';
 import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
@@ -21,11 +12,11 @@ const routes: Routes = [
         canActivate: [AuthGuard]
       },
       { 
-        path: 'editarConta', loadChildren: () => import('../edit-account/edit-account.module').then(m => m.EditAccountModule),
+        path: 'editar-conta', loadChildren: () => import('../edit-account/edit-account.module').then(m => m.EditAccountModule),
         canActivate: [AuthGuard]
       },
       { 
-        path: 'minhaConta', loadChildren: () => import('../my-account/my-account.module').then(m => m.MyAccountModule),
+        path: 'minha-conta', loadChildren: () => import('../my-account/my-account.module').then(m => m.MyAccountModule),
         canActivate: [AuthGuard]
       },
       { 
@@ -54,9 +45,8 @@ const routes: Routes = [
         canActivate: [AuthGuard]
       },
       { path: '', redirectTo: '/admin/dashboard', pathMatch: 'full' }
-    ],
-    // canActivate: [AuthGuard],
-  },
+    ]
+  }
 ];
 
 @NgModule({

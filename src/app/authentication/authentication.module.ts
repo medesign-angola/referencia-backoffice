@@ -12,7 +12,7 @@ import { Title } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
-import { ToastrModule } from 'ngx-toastr';
+import { ShareModuleModule } from '../share-module/share-module.module';
 
 
 
@@ -31,7 +31,7 @@ import { ToastrModule } from 'ngx-toastr';
     ReactiveFormsModule,
     HttpClientModule,
     JwtModule,
-    // ToastrModule.forRoot(),
+    ShareModuleModule
   ],
   exports: [
     SignInComponent,

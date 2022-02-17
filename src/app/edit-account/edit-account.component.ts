@@ -1,4 +1,7 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-edit-account',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditAccountComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private location: Location,
+    private title: Title
+  ) { }
 
   ngOnInit(): void {
+    this.title.setTitle("Editar perfil - Referência");
+  }
+
+  faArrowLeft = faArrowLeft;
+
+  previous(): void{
+
+    this.location.back();
+
   }
 
 }

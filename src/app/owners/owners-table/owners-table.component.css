@@ -1,4 +1,7 @@
-
+.recent-grid{
+    box-shadow: 0px 4px 14px #ddd;
+    border-radius: 15px;
+}
 .card{
     background: #fff;
     border-radius: 5px;

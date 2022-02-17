@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-my-info',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyInfoComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  
+  }
+
+  faEditIcon = faPencilAlt;
+
+  edit(): void{
+    this.router.navigate(['/admin/editar-conta']);
   }
 
 }
