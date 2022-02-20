@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
-import { UserMyaccountHeaderComponent } from './user-myaccount-header/user-myaccount-header.component';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { SettingsComponent } from './settings/settings.component';
@@ -15,7 +14,6 @@ import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
-    UserMyaccountHeaderComponent,
     MenuComponent,
     SettingsComponent,
     FooterComponent
@@ -29,8 +27,7 @@ import { ToastrModule } from 'ngx-toastr';
   ],
   exports: [
     MenuComponent,
-    FooterComponent,
-    UserMyaccountHeaderComponent
+    FooterComponent
   ]
 })
 export class ShareModuleModule { }

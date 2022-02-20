@@ -144,7 +144,11 @@ export class UserService implements OnInit {
     this.auth.getUserAuthenticated().subscribe((res) => {
       this.userId = res.id;
       this.userFirstName = res.name;
+      this.userLastName = 'static data';
       this.userEmail = res.email;
+      this.userAgency = 'static data';
+      this.userPhone = 'static data';
+      this.userLocalization = 'static data';
       this.userCategory = 'Vendedor';
 
       // console.log(res);

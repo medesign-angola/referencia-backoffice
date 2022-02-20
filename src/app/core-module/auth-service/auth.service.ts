@@ -106,8 +106,12 @@ export class AuthService {
 
       localStorage.removeItem('token');
       this.router.navigate(['/login']);
+
+      let oneMinuteInMiliSeconds = 60000;
+      let minutesWanted = 5;
+      let totalMinutes = oneMinuteInMiliSeconds * minutesWanted
       
-      this.utilsService.getToasterErrorAlerts('A sua conexão expirou!', 'Falha de conexão');
+      this.utilsService.getToasterErrorAlerts('A sua conexão expirou!', 'Falha de conexão', totalMinutes, undefined, true, true, false);
 
     }
 
@@ -117,14 +121,6 @@ export class AuthService {
     let userAuthenticationLogoutUrl = this.domain + "logout?token=" + localStorage.getItem('token');
 
     return this.http.post<any>(userAuthenticationLogoutUrl, {});
-  }
-
-  private subject = new Subject<string>();
-  setAuthMessages(message: string){
-    this.subject.next(message)
-  }
-  getAuthMessage(): Observable<string>{
-    return this.subject.asObservable();
   }
 
 }

@@ -1,6 +1,18 @@
 <div class="panel">
     
-    <app-user-myaccount-header></app-user-myaccount-header>
+    <div class="first-block">
+        <div class="img-profile">
+            <img src="assets/Imagens/solicitacoes/image.jpg" alt="">
+        </div>
+        <div class="details">
+            <div class="title-details">
+                <h2>{{userFirstName}} {{userLastName}}</h2>
+            </div>
+            <div class="paragraph">
+                <p>{{userEmail}}</p>
+            </div>
+        </div>
+    </div>
     <div class="second-block">
 
         <div class="blocks">
@@ -8,15 +20,15 @@
             <div>
                 <div class="block">
                     <div class="head"><h3>Nome</h3></div>
-                    <div class="body">Isaquias MArques</div>
+                    <div class="body">{{userFirstName}} {{userLastName}}</div>
                 </div>
                 <div class="block">
                     <div class="head"><h3>Telefone</h3></div>
-                    <div class="body">+244 - 999 999 999</div>
+                    <div class="body">{{userPhone}}</div>
                 </div>
                 <div class="block">
                     <div class="head"><h3>Localização</h3></div>
-                    <div class="body">Luanda - Cazenga</div>
+                    <div class="body">{{userLocation}}</div>
                 </div>
             </div>
 
@@ -26,7 +38,7 @@
             <div>
                 <div class="block">
                     <div class="head"><h3>Agência</h3></div>
-                    <div class="body">IsaquiaSebastião</div>
+                    <div class="body">{{userAgency}}</div>
                 </div>
                 <div class="block">
                     <div class="head"><h3>Nº de Imóveis</h3></div>

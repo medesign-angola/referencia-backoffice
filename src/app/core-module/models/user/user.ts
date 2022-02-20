@@ -1,6 +1,10 @@
 export interface UserModel{
-    id: number,
-    username: string,
-    password: string,
-    email: string,
+    userId: number,
+    userFirstName: string,
+    userLastName: string,
+    userCategory: string,
+    userEmail: string,
+    userAgency: string,
+    userPhone: string,
+    userLocation: string
 }

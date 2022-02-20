@@ -8,17 +8,19 @@ export class UtilsService {
 
   constructor(private toastrService: ToastrService) { }
 
-  getToasterErrorAlerts(message: string, classification: string, timeOutDuration: number = 3000, positionClass:string = 'left', progressBarVariable: boolean = false){
+  getToasterErrorAlerts(message: string, classification: string, timeOutDuration: number = 3000, positionClass:string = 'toast-top-right', progressBarVariable: boolean = false, buttonClose: boolean = false, disableTimeOut: boolean = false){
 
     return this.toastrService.error(message, classification, {
       timeOut: timeOutDuration,
       positionClass: positionClass,
-      progressBar: progressBarVariable
+      progressBar: progressBarVariable,
+      closeButton: buttonClose,
+      disableTimeOut: disableTimeOut
     });
   
   }
 
-  getToasterSuccessAlerts(message: string, classification: string, timeOutDuration: number = 3000, positionClass:string = 'left', progressBarVariable: boolean = false){
+  getToasterSuccessAlerts(message: string, classification: string, timeOutDuration: number = 3000, positionClass:string = 'toast-top-right', progressBarVariable: boolean = false){
 
     return this.toastrService.success(message, classification, {
       timeOut: timeOutDuration,
@@ -28,7 +30,7 @@ export class UtilsService {
   
   }
 
-  getToasterWarningAlerts(message: string, classification: string, timeOutDuration: number = 3000, positionClass:string = 'left', progressBarVariable: boolean = false){
+  getToasterWarningAlerts(message: string, classification: string, timeOutDuration: number = 3000, positionClass:string = 'toast-top-right', progressBarVariable: boolean = false){
 
     return this.toastrService.warning(message, classification, {
       timeOut: timeOutDuration,

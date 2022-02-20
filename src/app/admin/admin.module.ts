@@ -18,6 +18,7 @@ import { OwnersModule } from '../owners/owners.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { JwtModule } from '@auth0/angular-jwt';
 import { HttpClientModule } from '@angular/common/http';
+import { CoreModuleModule } from '../core-module/core-module.module';
 
 
 export function tokenGetter() {
@@ -34,6 +35,7 @@ export function tokenGetter() {
     ShareModuleModule,
     HttpClientModule,
     FontAwesomeModule,
+    CoreModuleModule
     // JwtModule.forRoot({
     //   config: {
     //     tokenGetter: tokenGetter,

@@ -1,50 +1,71 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <div class="panel">
     
     <form>
-        <app-user-myaccount-header></app-user-myaccount-header>
-        <div>
-            <div class="label">
+        <div class="first-block">
+            <div class="img-profile">
+                <img src="assets/Imagens/solicitacoes/image.jpg" alt="">
+            </div>
+            <div class="details">
+                <div class="title-details">
+                    <h2>{{userFirstName}} {{userLastName}}</h2>
+                </div>
+                <div class="paragraph">
+                    <p>{{userEmail}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="title">
+            <h2>Informações de Perfil</h2>
+        </div>
+        <div class="form-row">
+            <div class="col label">
                 <label for="nome">Nome completo</label>
             </div>
-            <div class="input primeiro">
-                <input type="text" name="nome" id="nome">
+            <div class="col-5">
+                <input type="text" class="form-control" name="first-name" value="{{userFirstName}}">
             </div>
-            <div class="input ultimo">
-                <input type="text" name="nome" id="nome">
+            <div class="col-5">
+                <input type="text" class="form-control" name="last-name"  value="{{userLastName}}">
             </div>
         </div>
-        <div>
-            <div class="label">
+
+        <div class="form-row">
+            <div class="col label">
                 <label for="email">Email</label>
             </div>
-            <div class="input">
-                <input type="email" name="email" id="email">
+            <div class="col-10">
+                <input type="text" class="form-control" name="email"  value="{{userEmail}}">
             </div>
         </div>
-        <div>
-            <div class="label">
-                <label for="telefone">Telefone</label>
+
+        <div class="form-row">
+            <div class="col label">
+                <label for="phone">Telefone</label>
             </div>
-            <div class="input">
-                <input type="tel" name="telefone" id="telefone">
-            </div>
-        </div>
-        <div>
-            <div class="label">
-                <label for="agencia">Agência</label>
-            </div>
-            <div class="input">
-                <input type="text" name="agencia" id="agencia">
+            <div class="col-10">
+                <input type="tel" class="form-control" name="phone"  value="{{userPhone}}">
             </div>
         </div>
-        <div>
-            <div class="label">
-                <label for="localizacao">Localização</label>
+
+        <div class="form-row">
+            <div class="col label">
+                <label for="agency">Agência</label>
             </div>
-            <div class="input">
-                <input type="text" name="localizacao" id="localizacao">
+            <div class="col-10">
+                <input type="text" class="form-control" name="agency"  value="{{userAgency}}">
             </div>
         </div>
+
+        <div class="form-row">
+            <div class="col label">
+                <label for="location">Localização</label>
+            </div>
+            <div class="col-10">
+                <input type="text" class="form-control" name="location"  value="{{userLocation}}">
+            </div>
+        </div>
+
         <div class="edit-button">
             <button type="submit">Salvar alterações</button>
         </div>

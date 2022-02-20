@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, Event, NavigationEnd } from '@angular/router';
-import { AsyncPipe, Location } from '@angular/common';
-import { UtilsService } from '../service/utils.service';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Router, Event, NavigationEnd } from '@angular/router';
+import { UserModel } from 'src/app/core-module/models/user/user';
 import { UserService } from 'src/app/core-module/user-services/user.service';
 
 @Component({
@@ -9,14 +8,18 @@ import { UserService } from 'src/app/core-module/user-services/user.service';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent implements OnInit, OnChanges {
 
   constructor(
     private router: Router,
     private userService: UserService
-    ) { 
-      
-     }
+    ) { }
+
+  // Input data from Admin Module
+
+  @Input() userData: UserModel;
+
+  // 
 
   title: any = this.check();
   userName: string;
@@ -52,8 +55,11 @@ export class MenuComponent implements OnInit {
     this.check();
     this.checkSettings();
     // this.getAuthenticatedUser();
-    this.getUserAuthenticated();
-    this.verifyUserToken();
+    this.getUserData();
+  }
+
+  ngOnChanges(): void {
+    this.getUserData();
   }
 
   check(){
@@ -154,32 +160,12 @@ export class MenuComponent implements OnInit {
     }
   }
 
-  getUserAuthenticated(){
-
-    this.userService.userAuthenticated();
-
-    let interval = setInterval(() => {
-      if(this.userService.userFirstName === undefined && this.userService.userLastName === undefined ){
-        // console.log("Estão undefind!");
-      }else{
-        this.userName = this.userService.userFirstName;
-        this.userCategory = this.userService.userCategory;
-
-        // console.log(this.userName);
-
-        clearInterval(interval);
-      }
-    }, 2000);
-  }
-
-  verifyUserToken(){
-    
-    // console.log(this.userService.tokenExpirateTime());
-
-    let intervalToVerifyStatusToken = setInterval(() => {
-      // console.log(this.userService.isTokenExpired());
-    }, 5000);
-
+  getUserData(){
+    setTimeout(() => {
+      // console.log(this.userData);
+      this.userName = this.userData.userFirstName;
+      this.userCategory = this.userData.userCategory;
+    }, 1000);
   }
 
 }

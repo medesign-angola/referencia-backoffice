@@ -13,6 +13,8 @@ div.panel{
     z-index: 16;
     box-sizing: border-box;
 }
+
+
 .img-profile{
     width: 120px;
     height: 120px;
@@ -33,12 +35,12 @@ div.panel{
 }
 .details{
     text-align: center;
-    margin: 30px 0px;
+    margin: 0px 0px;
 }
-.details .title{
+.details .title-details{
     padding: 10px;
 }
-.details .title h2{
+.details .title-details h2{
     font-weight: 100;
 }
 .details .paragraph{
@@ -49,32 +51,25 @@ div.panel{
     font-size: small;
     color: #aaa;
 }
-.second-block{
+
+
+.title{
     margin: 70px 0px;
-    /* background-color: #fc0; */
 }
-.second-block .blocks > div{
-    display: flex;
-    justify-content: space-around;
-    margin: 50px 0px;
+form{
+    padding: 20px;
 }
-.second-block .blocks .block{
-    width: 200px;
-    box-shadow: 0px 2px 15px #ddd;
-    border-radius: 10px;
-    /* border: 1px solid #bbb; */
-    padding: 15px;
+.form-row{
+    margin: 35px 0px;
 }
-.second-block .blocks .block .head{
-    text-align: center;
-    font-weight: 300;
-    margin-bottom: 5px;
+.label{
+    padding: 10px 15px;
 }
-.second-block .blocks .block .body{
-    text-align: center;
-    font-size: small;
-    font-weight: 100;
-    color: #aaa;
+.form-control{
+    padding: 10px 15px;
+}
+.form-control:focus{
+    box-shadow: none;
 }
 .edit-button{
     text-align: center;
@@ -88,3 +83,4 @@ div.panel{
     cursor: pointer;
     border-radius: 5px;
 }
+
