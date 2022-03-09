@@ -24,6 +24,10 @@ export class AuthService {
 
   private domain = environment.apiUrl;
 
+  get mainDomain(){
+    return this.domain;
+  }
+
   isLoggedIn():boolean {
     return !!localStorage.getItem('token');
   }
@@ -54,7 +58,7 @@ export class AuthService {
   }
   
   login(user: any): Observable<UserModel>{
-    let loginUrl = this.domain + "login";
+    let loginUrl = this.mainDomain + "login";
 
     return this.http.post<UserModel>(loginUrl, user);
   }
@@ -65,7 +69,7 @@ export class AuthService {
 
     if(!this.isTokenExpired(token)){
 
-      let  userAuthenticatdUrl = this.domain + "user?token=" + token;
+      let  userAuthenticatdUrl = this.mainDomain + "user?token=" + token;
 
       return this.http.post<any>(userAuthenticatdUrl, {});
 
@@ -118,7 +122,7 @@ export class AuthService {
   }
 
   userLogout(){
-    let userAuthenticationLogoutUrl = this.domain + "logout?token=" + localStorage.getItem('token');
+    let userAuthenticationLogoutUrl = this.mainDomain + "logout?token=" + localStorage.getItem('token');
 
     return this.http.post<any>(userAuthenticationLogoutUrl, {});
   }

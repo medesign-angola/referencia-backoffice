@@ -163,7 +163,7 @@ export class MenuComponent implements OnInit, OnChanges {
   getUserData(){
     setTimeout(() => {
       // console.log(this.userData);
-      this.userName = this.userData.userFirstName;
+      this.userName = this.userData.userFirstName +" "+ this.userData.userLastName;
       this.userCategory = this.userData.userCategory;
     }, 1000);
   }

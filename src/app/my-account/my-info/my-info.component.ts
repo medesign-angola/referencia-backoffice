@@ -1,3 +1,4 @@
+import { FormatWidth, getLocaleDateFormat } from '@angular/common';
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons';
@@ -25,6 +26,7 @@ export class MyInfoComponent implements OnInit, OnChanges {
   userAgency: string;
   userLocation: string;
   userCategory: string;
+  userCreatedAt: any;
 
   ngOnInit(): void {
     this.getUserData()
@@ -50,6 +52,9 @@ export class MyInfoComponent implements OnInit, OnChanges {
       this.userAgency = this.userService.userAgency
       this.userLocation = this.userService.userLocalization
       this.userCategory = this.userService.userCategory
+      this.userCreatedAt = this.userService.userCreatedAt;
+
+      // console.log(this.userCreatedAt);
 
     }, 3000);
   }

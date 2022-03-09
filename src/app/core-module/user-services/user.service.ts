@@ -2,6 +2,7 @@ import { Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UtilsService } from 'src/app/share-module/service/utils.service';
 import { AuthService } from '../auth-service/auth.service';
+import { UserControllerService } from '../controllers/user/user-controller.service';
 import { UserModel } from '../models/user/user';
 
 @Injectable({
@@ -17,11 +18,13 @@ export class UserService implements OnInit {
   private phone;
   private agency;
   private localization;
+  private createdAt;
 
   constructor(
     private auth: AuthService,
     private utilsService: UtilsService,
-    private router: Router
+    private router: Router,
+    private userController: UserControllerService
   ) { }
 
   get userId(){
@@ -79,6 +82,13 @@ export class UserService implements OnInit {
   set userCategory(category: string){
     this.category = category;
   }
+  get userCreatedAt(){
+    return this.createdAt;
+  }
+  set userCreatedAt(date){
+    this.createdAt = date;
+  }
+
 
   ngOnInit(): void {
 
@@ -132,7 +142,7 @@ export class UserService implements OnInit {
       (error: any) => {
         // console.log(error.error);
   
-        this.utilsService.getToasterErrorAlerts("Verifique a sua conexão à internet", 'Erro de conectividade');
+        this.utilsService.getToasterErrorAlerts("Falha ao tentar comunicar com o servidor!", 'Erro de comunicação');
   
       }
       );
@@ -143,18 +153,20 @@ export class UserService implements OnInit {
 
     this.auth.getUserAuthenticated().subscribe((res) => {
       this.userId = res.id;
-      this.userFirstName = res.name;
-      this.userLastName = 'static data';
+      this.userFirstName = res.first_name;
+      this.userLastName = res.last_name;
       this.userEmail = res.email;
-      this.userAgency = 'static data';
-      this.userPhone = 'static data';
-      this.userLocalization = 'static data';
-      this.userCategory = 'Vendedor';
+      this.userAgency = res.agencia;
+      this.userPhone = res.telefone;
+      this.userLocalization = res.localizacao;
+      this.userCategory = res.categoria;
+      this.userCreatedAt = new Date(res.created_at).toLocaleDateString();
 
       // console.log(res);
 
     }, err => {
-      console.log(err);
+      // console.log(err);
+      this.isTokenExpired();
     });
 
   }
@@ -198,6 +210,16 @@ export class UserService implements OnInit {
     });
   }
 
+  getAllUsers(){
+    
+    let users: any;
 
+    this.userController.getAllUsers().subscribe(res => {
+      console.log(res);
+      // users = res
+    });
+    // console.log(users);
+    // return users;
+  }
   
 }
